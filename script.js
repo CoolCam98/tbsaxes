@@ -250,30 +250,20 @@ function handleSubmit(e) {
   const formData = new FormData(form);
   const body = new URLSearchParams(formData).toString();
 
+  // Submit to the form's own action URL — Netlify intercepts POSTs to any path
+  // and routes them to the form handler based on the hidden form-name field
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: body,
   })
     .then((response) => {
-      if (!response.ok) throw new Error('Submission failed');
-
-      btn.innerHTML = 'Sent · We\'ll Be In Touch ✓';
-      btn.style.background = '#0f435f';
-      btn.style.color = '#faf9f3';
-      btn.style.borderColor = '#0f435f';
-      btn.style.opacity = '1';
-
-      setTimeout(() => {
-        form.reset();
-        btn.innerHTML = originalHtml;
-        btn.disabled = false;
-        btn.style.background = '';
-        btn.style.color = '';
-        btn.style.borderColor = '';
-      }, 4000);
+      if (!response.ok) throw new Error('Submission failed: ' + response.status);
+      // Redirect to the thank-you page
+      window.location.href = '/thanks';
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error('Form submission error:', err);
       btn.innerHTML = 'Something Went Wrong · Try Again';
       btn.style.background = '#a04040';
       btn.style.color = '#faf9f3';

@@ -122,6 +122,19 @@
 </head>
 <body>
 
+<!-- Hidden form for Netlify build-time detection.
+     The real form (below) is JS-controlled, which Netlify's HTML scanner sometimes misses.
+     This static copy guarantees the form is registered at deploy time. -->
+<form name="booking" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="date" name="event-date" />
+  <input type="text" name="event-type" />
+  <input type="text" name="venue" />
+  <textarea name="details"></textarea>
+  <input name="bot-field" />
+</form>
+
 <a href="#main" class="skip-link">Skip to content</a>
 
 <!-- ============ NAV ============ -->
@@ -277,12 +290,12 @@
         </div>
       </article>
 
-      <article class="lineup-member lineup-member--timmy" tabindex="0">
-        <div class="lineup-photo" style="background-image: url('assets/players/timmy.jpg');" role="img" aria-label="Timmy, drums"></div>
+      <article class="lineup-member lineup-member--timmie" tabindex="0">
+        <div class="lineup-photo" style="background-image: url('assets/players/timmie.jpg');" role="img" aria-label="Timmie, drums"></div>
         <div class="lineup-overlay"></div>
         <div class="lineup-content">
           <div class="lineup-member-name">Drums</div>
-          <div class="lineup-member-player">Timmy</div>
+          <div class="lineup-member-player">Timmie</div>
         </div>
       </article>
     </div>
@@ -416,6 +429,7 @@
       id="bookingForm"
       name="booking"
       method="POST"
+      action="/thanks"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onsubmit="handleSubmit(event)"
