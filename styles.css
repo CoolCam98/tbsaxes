@@ -364,7 +364,7 @@ body::before {
   display: flex;
   gap: 56px;
   white-space: nowrap;
-  animation: slide 32s linear infinite;
+  animation: slide 15s linear infinite;
   font-family: var(--f-display);
   font-weight: 400;
   font-size: 16px;
@@ -514,7 +514,7 @@ body::before {
   left: 480px;
   transform: rotate(-3deg);
   z-index: 5;
-  width: 380px;
+  width: 300px;
 }
 
 /* No need to push the header over anymore — photo sits beside the header */
@@ -1310,6 +1310,9 @@ body::before {
   .footer-brand { grid-column: 1 / -1; }
   .footer-col { text-align: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .marquee-track {
+    animation-duration: 4s;
+  }
 }
 
 @media (max-width: 560px) {
