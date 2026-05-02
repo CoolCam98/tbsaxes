@@ -474,9 +474,9 @@ body::before {
   aspect-ratio: auto;
   height: auto;
   object-fit: contain;
-  clip-path: inset(0 0 0 18%);  /* crop 12% off the left */
-  margin-left: -19%;            /* slide it back so it fills the frame */
-  width: 118%;
+  clip-path: inset(0 0 0 12%);  /* crop 12% off the left */
+  margin-left: -12%;            /* slide it back so it fills the frame */
+  width: 112%;
 }
 .band-photo figcaption {
   margin-top: 12px;
@@ -510,11 +510,11 @@ body::before {
 }
 .band-photo--shows {
   position: absolute;
-  top: -40px;
+  top: -60px;
   left: 480px;
   transform: rotate(-3deg);
   z-index: 5;
-  width: 300px;
+  width: 380px;
 }
 
 /* No need to push the header over anymore — photo sits beside the header */
@@ -670,19 +670,19 @@ body::before {
   --photo-zoom: 1.2;
   --photo-zoom-hover: 1.05;
   --photo-pos-x: 20%;
-  --photo-pos-y: 25%;
+  --photo-pos-y: 45%;
 }
 .lineup-member--camryn {
   --photo-zoom: 1.2;
   --photo-zoom-hover: 1.05;
   --photo-pos-x: 50%;
-  --photo-pos-y: 50%;
+  --photo-pos-y: 70%;
 }
 .lineup-member--nathan {
   --photo-zoom: 1.4;
   --photo-zoom-hover: 1.05;
   --photo-pos-x: 50%;
-  --photo-pos-y: 0%;
+  --photo-pos-y: 15%;
 }
 .lineup-member--timmy {
   --photo-zoom: 1.2;
@@ -1232,8 +1232,13 @@ body::before {
   }
   .nav-toggle { display: block; }
 
-  .hero { padding: 110px 20px 60px; }
-  .hero-content { padding-bottom: 240px; }
+  .hero {
+    padding: 140px 20px 20px;
+    min-height: auto;
+  }
+  .hero-content { padding-bottom: 100px; }
+  .hero-tagline { margin-top: 40px; }
+  .hero-ctas { margin-top: 120px; }
 
   .section, .shows-inner, .lineup-inner, .booking-inner, .listen-grid {
     padding-left: 20px;
@@ -1245,6 +1250,19 @@ body::before {
   .lineup-grid { grid-template-columns: repeat(2, 1fr); }
   .lineup-member { min-height: 320px; }
   .lineup-member:nth-child(2n) { border-right: none; }
+  .lineup-member--camryn {
+  --photo-zoom: 1.3;
+  --photo-pos-y: 30%;
+  --photo-pos-x: 80%;
+  }
+  .lineup-member--revae {
+  --photo-zoom: 1.3;
+  --photo-pos-y: 20%;
+  }
+  .lineup-member--jason {
+  --photo-zoom: 1.3;
+  --photo-pos-y: 20%;
+  }
 
   /* Polaroids — stack and center on mobile */
   .about {
@@ -1262,8 +1280,8 @@ body::before {
     position: static;
     margin: 0 auto 30px;
     transform: rotate(-2deg);
-    width: 200px;
-    padding: 10px 10px 34px;
+    width: 280px;
+    padding: 12px 12px 40px;
   }
   .shows-header { padding-left: 0; }
 
@@ -1285,14 +1303,23 @@ body::before {
   .form { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
 
-  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
   .footer-brand { grid-column: 1 / -1; }
+  .footer-col { text-align: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 
 @media (max-width: 560px) {
   .hero-title { font-size: clamp(36px, 12vw, 64px); }
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-col { text-align: center; }
+  .footer-col h5 { font-size: 9px; margin-bottom: 14px; }
+  .footer-col ul li { padding: 5px 0; }
+  .footer-col ul a { font-size: 13px; }
   .marquee-track { font-size: 13px; gap: 36px; }
   .marquee-track span { gap: 36px; }
   .lineup-grid { grid-template-columns: 1fr; }
