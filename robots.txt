@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tbsaxcollective.com/sitemap.xml
+Sitemap: https://tbsaxes.com/sitemap.xml
