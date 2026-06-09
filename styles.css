@@ -34,10 +34,12 @@ body {
   overflow-x: hidden;
 }
 
+/* ========== ACCESSIBILITY ========== */
+
 /* Skip link for keyboard users */
 .skip-link {
   position: absolute;
-  top: -100px;
+  top: -200px;
   left: 20px;
   background: var(--navy);
   color: var(--cream);
@@ -56,7 +58,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Visually hidden but available to screen readers and search engines */
+/* Visually hidden but available to screen readers */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -69,7 +71,7 @@ body {
   border: 0;
 }
 
-/* Global focus styles — visible, consistent */
+/* Global focus styles — visible, consistent (WCAG 2.4.7) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -80,7 +82,7 @@ textarea:focus-visible {
   border-radius: 1px;
 }
 
-/* On the dark sections, use steel for focus ring contrast */
+/* On dark sections, use steel for focus ring contrast */
 .lineup a:focus-visible,
 .lineup button:focus-visible,
 .booking a:focus-visible,
@@ -92,7 +94,9 @@ textarea:focus-visible {
   outline-color: var(--steel);
 }
 
-/* Subtle film grain */
+/* ========== GLOBAL DECORATION ========== */
+
+/* Subtle film grain overlay */
 body::before {
   content: '';
   position: fixed;
@@ -187,6 +191,7 @@ body::before {
 .nav-cta:hover { background: var(--teal); }
 .nav-cta::after { display: none; }
 
+/* min touch target 44px per WCAG 2.5.8 */
 .nav-toggle {
   display: none;
   background: none;
@@ -197,9 +202,11 @@ body::before {
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  min-height: 44px;
+  padding: 0 8px;
 }
 
-/* ========== HERO — riso gig poster ========== */
+/* ========== HERO ========== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -209,7 +216,7 @@ body::before {
   isolation: isolate;
 }
 
-/* Paper texture — subtle noise for the warm cream stock */
+/* Paper texture */
 .hero::before {
   content: '';
   position: absolute;
@@ -221,7 +228,7 @@ body::before {
   pointer-events: none;
 }
 
-/* The teal illustration layer — offset slightly for riso misregistration */
+/* Riso teal plate — offset for misregistration effect */
 .hero-plate-teal {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -238,7 +245,7 @@ body::before {
   height: auto;
 }
 
-/* The navy illustration layer — the "key" plate, sits on top */
+/* Riso navy plate — key plate, sits on top */
 .hero-plate-navy {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -281,7 +288,7 @@ body::before {
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero-tagline {
@@ -309,6 +316,7 @@ body::before {
   animation: fadeUp 1s ease 0.85s both;
 }
 
+/* ========== BUTTONS ========== */
 .btn {
   font-family: var(--f-display);
   font-weight: 500;
@@ -324,6 +332,7 @@ body::before {
   transition: all 0.25s ease;
   cursor: pointer;
   background: none;
+  min-height: 44px; /* WCAG 2.5.8 touch target */
 }
 .btn-primary {
   background: var(--navy);
@@ -382,7 +391,7 @@ body::before {
 }
 @keyframes slide {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ========== SECTION BASE ========== */
@@ -430,6 +439,12 @@ body::before {
 }
 
 /* ========== ABOUT ========== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 80px;
+  align-items: start;
+}
 .about-copy p {
   font-family: var(--f-body);
   font-size: 18px;
@@ -448,8 +463,7 @@ body::before {
   color: var(--teal);
 }
 
-/* ========== BAND PHOTOS — polaroid, pinned to sections ========== */
-/* Shared polaroid look. No hover animations — keeps things light. */
+/* ========== BAND PHOTOS — polaroid style ========== */
 .band-photo {
   margin: 0;
   background: var(--cream);
@@ -468,16 +482,6 @@ body::before {
   object-position: center;
   filter: grayscale(20%) contrast(1.05) sepia(0.08);
 }
-
-/* Shows polaroid: rectangular (natural aspect), with the left edge cropped */
-.band-photo--shows img {
-  aspect-ratio: auto;
-  height: auto;
-  object-fit: contain;
-  clip-path: inset(0 0 0 12%);  /* crop 12% off the left */
-  margin-left: -12%;            /* slide it back so it fills the frame */
-  width: 112%;
-}
 .band-photo figcaption {
   margin-top: 12px;
   font-family: var(--f-body);
@@ -489,13 +493,7 @@ body::before {
   letter-spacing: 0.02em;
 }
 
-/* About section — photo pinned on the right, aligned with the header */
-.about {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 80px;
-  align-items: start;
-}
+/* About polaroid — sticky, pinned to the right */
 .band-photo--about {
   transform: rotate(-3deg);
   margin-top: -180px;
@@ -504,10 +502,7 @@ body::before {
   width: 360px;
 }
 
-/* Shows section — smaller photo to the right of the header */
-.shows-inner {
-  position: relative;
-}
+/* Shows polaroid — rectangular, left edge cropped */
 .band-photo--shows {
   position: absolute;
   top: -60px;
@@ -516,8 +511,14 @@ body::before {
   z-index: 5;
   width: 300px;
 }
-
-/* No need to push the header over anymore — photo sits beside the header */
+.band-photo--shows img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+  clip-path: inset(0 0 0 12%);
+  margin-left: -12%;
+  width: 112%;
+}
 
 /* ========== LINEUP ========== */
 .lineup {
@@ -557,11 +558,10 @@ body::before {
 }
 
 .lineup-member {
-  /* Per-photo defaults — override per player below */
-  --photo-zoom: 1;          /* 1 = no zoom; 1.2 = zoomed in 20% */
-  --photo-zoom-hover: 1.05; /* extra zoom on hover (multiplier) */
-  --photo-pos-x: 50%;       /* horizontal: 0% = left, 50% = center, 100% = right */
-  --photo-pos-y: 25%;       /* vertical: 0% = top, 50% = middle, 100% = bottom */
+  --photo-zoom: 1;
+  --photo-zoom-hover: 1.05;
+  --photo-pos-x: 50%;
+  --photo-pos-y: 25%;
 
   padding: 48px 22px;
   border-right: 1px solid var(--teal);
@@ -576,7 +576,6 @@ body::before {
 }
 .lineup-member:last-child { border-right: none; }
 
-/* B&W photo behind everything — subtle by default */
 .lineup-photo {
   position: absolute;
   inset: 0;
@@ -590,7 +589,6 @@ body::before {
   z-index: 1;
 }
 
-/* Dark gradient overlay so text stays readable */
 .lineup-overlay {
   position: absolute;
   inset: 0;
@@ -603,7 +601,6 @@ body::before {
   pointer-events: none;
 }
 
-/* Content sits on top */
 .lineup-content {
   position: relative;
   z-index: 3;
@@ -615,7 +612,6 @@ body::before {
   flex: 1;
 }
 
-/* Hover / focus state — photo brightens, slight zoom, overlay lightens */
 .lineup-member:hover .lineup-photo,
 .lineup-member:focus-visible .lineup-photo,
 .lineup-member:focus-within .lineup-photo {
@@ -653,43 +649,13 @@ body::before {
   text-shadow: 0 1px 8px rgba(20, 39, 61, 0.6);
 }
 
-
-.lineup-member--mady {
-  --photo-zoom: 1.2;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 50%;
-  --photo-pos-y: 25%;
-}
-.lineup-member--jason {
-  --photo-zoom: 1.4;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 50%;
-  --photo-pos-y: 25%;
-}
-.lineup-member--revae {
-  --photo-zoom: 1.2;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 20%;
-  --photo-pos-y: 45%;
-}
-.lineup-member--camryn {
-  --photo-zoom: 1.2;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 50%;
-  --photo-pos-y: 70%;
-}
-.lineup-member--nathan {
-  --photo-zoom: 1.4;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 50%;
-  --photo-pos-y: 15%;
-}
-.lineup-member--timmy {
-  --photo-zoom: 1.2;
-  --photo-zoom-hover: 1.05;
-  --photo-pos-x: 50%;
-  --photo-pos-y: 25%;
-}
+/* Per-member photo framing */
+.lineup-member--mady   { --photo-zoom: 1.2; --photo-pos-x: 50%; --photo-pos-y: 25%; }
+.lineup-member--jason  { --photo-zoom: 1.4; --photo-pos-x: 50%; --photo-pos-y: 25%; }
+.lineup-member--revae  { --photo-zoom: 1.2; --photo-pos-x: 20%; --photo-pos-y: 45%; }
+.lineup-member--camryn { --photo-zoom: 1.2; --photo-pos-x: 50%; --photo-pos-y: 70%; }
+.lineup-member--nathan { --photo-zoom: 1.4; --photo-pos-x: 50%; --photo-pos-y: 15%; }
+.lineup-member--timmy  { --photo-zoom: 1.2; --photo-pos-x: 50%; --photo-pos-y: 25%; }
 
 /* ========== SHOWS ========== */
 .shows {
@@ -702,6 +668,7 @@ body::before {
 .shows-inner {
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 .shows-header {
   display: flex;
@@ -720,7 +687,7 @@ body::before {
   display: grid;
   grid-template-columns: 180px 1fr 1fr auto;
   gap: 40px;
-  padding: 40px 8px 40px 8px;
+  padding: 40px 8px;
   border-bottom: 1px solid rgba(20, 39, 61, 0.2);
   align-items: center;
   transition: padding 0.3s ease, background 0.3s ease;
@@ -795,6 +762,9 @@ body::before {
   color: var(--navy);
   text-decoration: none;
   transition: all 0.2s ease;
+  min-height: 44px; /* WCAG 2.5.8 touch target */
+  display: inline-flex;
+  align-items: center;
 }
 .show-tag:hover {
   background: var(--navy);
@@ -943,13 +913,8 @@ body::before {
 .track-list li:hover .track-num { color: var(--teal); }
 .track-list li.active { padding-left: 12px; }
 .track-list li.active .track-num,
-.track-list li.active .track-title {
-  color: var(--teal);
-}
-.track-list li.active .track-num::before {
-  content: '▸ ';
-  color: var(--teal);
-}
+.track-list li.active .track-title { color: var(--teal); }
+.track-list li.active .track-num::before { content: '▸ '; color: var(--teal); }
 .track-num {
   font-family: var(--f-display);
   font-weight: 500;
@@ -1101,12 +1066,15 @@ body::before {
   font-family: var(--f-body);
   font-weight: 400;
   font-size: 15px;
+  letter-spacing: normal; /* prevent inherited spacing from distorting input text */
   transition: border-color 0.2s ease;
 }
+/* Visible focus for form inputs — overrides browser default (WCAG 2.4.7) */
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  outline: none;
+  outline: 2px solid var(--steel);
+  outline-offset: 3px;
   border-color: var(--steel);
 }
 .form-textarea {
@@ -1143,7 +1111,6 @@ body::before {
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -1151,7 +1118,6 @@ body::before {
   padding-bottom: 60px;
   border-bottom: 1px solid var(--teal);
 }
-
 .footer-brand {
   grid-column: 1 / -1;
   display: flex;
@@ -1161,7 +1127,6 @@ body::before {
   width: 150px;
   height: 150px;
 }
-
 .footer-brand-text h3 {
   font-family: var(--f-display);
   font-weight: 600;
@@ -1214,8 +1179,9 @@ body::before {
   gap: 16px;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE — 960px ========== */
 @media (max-width: 960px) {
+  /* Nav */
   .nav { padding: 14px 20px; }
   .nav.scrolled { padding: 10px 20px; }
   .nav-links { display: none; }
@@ -1228,10 +1194,11 @@ body::before {
     padding: 24px;
     gap: 20px;
     border-bottom: 1px solid var(--navy);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
   .nav-toggle { display: block; }
 
+  /* Hero */
   .hero {
     padding: 140px 20px 20px;
     min-height: auto;
@@ -1239,35 +1206,27 @@ body::before {
   .hero-content { padding-bottom: 100px; }
   .hero-tagline { margin-top: 40px; }
   .hero-ctas { margin-top: 120px; }
-  
-  .btn {
-    font-size: 0.8rem;
-  }
+
+  /* Buttons */
+  .btn { font-size: 0.8rem; }
+
+  /* Sections */
+  .section { padding: 80px 20px; }
+  .shows, .lineup, .booking { padding: 80px 20px; }
   .section, .shows-inner, .lineup-inner, .booking-inner, .listen-grid {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .section { padding-top: 80px; padding-bottom: 80px; }
-  .shows, .lineup, .booking { padding: 80px 20px; }
 
+  /* Lineup grid */
   .lineup-grid { grid-template-columns: repeat(2, 1fr); }
   .lineup-member { min-height: 320px; }
   .lineup-member:nth-child(2n) { border-right: none; }
-  .lineup-member--camryn {
-  --photo-zoom: 1.3;
-  --photo-pos-y: 30%;
-  --photo-pos-x: 80%;
-  }
-  .lineup-member--revae {
-  --photo-zoom: 1.3;
-  --photo-pos-y: 20%;
-  }
-  .lineup-member--jason {
-  --photo-zoom: 1.3;
-  --photo-pos-y: 20%;
-  }
+  .lineup-member--camryn { --photo-zoom: 1.3; --photo-pos-x: 80%; --photo-pos-y: 30%; }
+  .lineup-member--revae  { --photo-zoom: 1.3; --photo-pos-y: 20%; }
+  .lineup-member--jason  { --photo-zoom: 1.3; --photo-pos-y: 20%; }
 
-  /* Polaroids — stack and center on mobile */
+  /* Polaroids — flow into document, centered */
   .about {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1279,16 +1238,6 @@ body::before {
     width: 280px;
     padding: 10px 10px 38px;
   }
-   .shows-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .shows-header .btn {
-    align-self: flex-start;
-  }
-
-  /* band-photo--shows: remove absolute positioning, flow into doc */
   .band-photo--shows {
     position: static;
     margin: 0 auto 36px;
@@ -1296,7 +1245,15 @@ body::before {
     width: 260px;
   }
 
-  /* show-item: collapse to 2-col, wrap venue into full width */
+  /* Shows header — stack vertically */
+  .shows-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .shows-header .btn { align-self: flex-start; }
+
+  /* Show items — 2-column grid, date spanning both rows */
   .show-item {
     grid-template-columns: 80px 1fr;
     grid-template-rows: auto auto;
@@ -1307,78 +1264,65 @@ body::before {
     grid-row: 1 / 3;
     align-self: center;
   }
-  .show-city {
-    display: none; /* already set, just confirming */
-  }
+  .show-city { display: none; }
+  .show-date-day { font-size: 38px; }
+  .show-venue { font-size: 18px; }
   .show-tag {
     grid-column: 2;
     align-self: start;
-    display: inline-block;
     width: fit-content;
     font-size: 0.75rem;
     padding: 7px 12px;
   }
 
-  .booking-detail-value {
-    font-size: 1rem;
-  }
-  .show-date-day { font-size: 38px; }
-  .show-city { display: none; }
-  .show-venue { font-size: 18px; }
-
-  .listen-grid { grid-template-columns: 1fr; gap: 40px; padding: 0; }
+  /* Listen */
   .listen { padding: 80px 20px; }
+  .listen-grid { grid-template-columns: 1fr; gap: 40px; padding: 0; }
   .listen-player { padding: 32px 24px; }
   .listen-track-title { font-size: 26px; }
 
+  /* Booking */
   .booking-inner { grid-template-columns: 1fr; gap: 50px; }
+  .booking-detail-value { font-size: 1rem; }
   .form { padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
 
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
+  /* Footer */
+  .footer-top { grid-template-columns: repeat(2, 1fr); gap: 30px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-col { text-align: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .marquee-track {
-    animation-duration: 4s;
-  }
-  
+
+  /* Marquee — faster on smaller screens */
+  .marquee-track { animation-duration: 4s; }
 }
 
+/* ========== RESPONSIVE — 560px ========== */
 @media (max-width: 560px) {
+  /* Hero */
   .hero-title { font-size: clamp(36px, 12vw, 64px); }
+
+  /* Lineup — single column */
+  .lineup-grid { grid-template-columns: 1fr; }
+  .lineup-member { border-right: none; }
+
+  /* Shows */
+  .shows-header .section-title { font-size: clamp(28px, 8vw, 44px); }
+  .show-item { gap: 6px 12px; padding: 20px 8px; }
+  .show-date-day { font-size: 32px; }
+  .show-venue { font-size: 15px; line-height: 1.3; }
+  .show-venue-sub { font-size: 13px; margin-top: 4px; }
+  .band-photo--shows { width: 220px; }
+
+  /* Footer */
   .footer-top { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-col { text-align: center; }
   .footer-col h5 { font-size: 9px; margin-bottom: 14px; }
   .footer-col ul li { padding: 5px 0; }
   .footer-col ul a { font-size: 13px; }
+
+  /* Marquee */
   .marquee-track { font-size: 13px; gap: 36px; }
   .marquee-track span { gap: 36px; }
-  .lineup-grid { grid-template-columns: 1fr; }
-  .lineup-member { border-right: none; }
-  .shows-header .section-title {
-    font-size: clamp(28px, 8vw, 44px);
-  }
-  .show-item {
-    gap: 6px 12px;
-    padding: 20px 8px;
-  }
-  .show-date-day {
-    font-size: 32px;
-  }
-  .show-venue {
-    font-size: 15px;
-    line-height: 1.3;
-  }
-  .show-venue-sub {
-    font-size: 13px;
-    margin-top: 4px;
-  }
-  .band-photo--shows {
-    width: 220px;
-  }
 }
