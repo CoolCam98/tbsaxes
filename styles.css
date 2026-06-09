@@ -158,7 +158,7 @@ body::before {
 }
 .nav-links a {
   font-family: var(--f-body);
-  font-size: 12px;
+  font-size: 1rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--navy);
@@ -312,7 +312,7 @@ body::before {
 .btn {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 11px;
+  font-size: 1rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding: 16px 28px;
@@ -395,7 +395,7 @@ body::before {
 .section-kicker {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 1rem;
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--teal);
@@ -646,7 +646,7 @@ body::before {
   font-family: var(--f-body);
   font-weight: 400;
   font-style: italic;
-  font-size: 14px;
+  font-size: 1rem;
   color: var(--steel);
   margin-top: 6px;
   letter-spacing: 0.02em;
@@ -747,7 +747,7 @@ body::before {
 .show-date-day {
   font-family: var(--f-display);
   font-weight: 600;
-  font-size: 52px;
+  font-size: 2.5rem;
   line-height: 1;
   color: var(--navy);
   letter-spacing: 0.01em;
@@ -755,7 +755,7 @@ body::before {
 .show-date-month {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 11px;
+  font-size: 1rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--teal);
@@ -772,7 +772,7 @@ body::before {
 .show-venue-sub {
   font-family: var(--f-body);
   font-weight: 300;
-  font-size: 13px;
+  font-size: 1rem;
   color: var(--teal);
   margin-top: 6px;
   letter-spacing: 0.04em;
@@ -787,7 +787,7 @@ body::before {
 .show-tag {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 1rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   padding: 9px 14px;
@@ -1035,8 +1035,8 @@ body::before {
 .booking-detail-label {
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 10px;
-  letter-spacing: 0.3em;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--steel);
   margin-bottom: 10px;
@@ -1083,9 +1083,8 @@ body::before {
 .form-label {
   display: block;
   font-family: var(--f-display);
-  font-weight: 500;
-  font-size: 10px;
-  letter-spacing: 0.26em;
+  font-weight: 700;
+  font-size: 1rem;
   text-transform: uppercase;
   color: var(--steel);
   margin-bottom: 10px;
@@ -1176,15 +1175,15 @@ body::before {
   font-family: var(--f-body);
   font-style: italic;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 1rem;
   color: var(--steel);
   max-width: 300px;
   line-height: 1.55;
 }
 .footer-col h5 {
   font-family: var(--f-display);
-  font-weight: 500;
-  font-size: 10px;
+  font-weight: 700;
+  font-size: 1rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--steel);
@@ -1196,7 +1195,7 @@ body::before {
   color: var(--cream);
   text-decoration: none;
   font-family: var(--f-body);
-  font-size: 14px;
+  font-size: 1rem;
   transition: color 0.2s ease;
 }
 .footer-col ul a:hover { color: var(--steel); }
@@ -1207,7 +1206,7 @@ body::before {
   padding-top: 32px;
   font-family: var(--f-display);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--steel);
@@ -1240,7 +1239,10 @@ body::before {
   .hero-content { padding-bottom: 100px; }
   .hero-tagline { margin-top: 40px; }
   .hero-ctas { margin-top: 120px; }
-
+  
+  .btn {
+    font-size: 0.8rem;
+  }
   .section, .shows-inner, .lineup-inner, .booking-inner, .listen-grid {
     padding-left: 20px;
     padding-right: 20px;
@@ -1277,19 +1279,48 @@ body::before {
     width: 280px;
     padding: 10px 10px 38px;
   }
+   .shows-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .shows-header .btn {
+    align-self: flex-start;
+  }
+
+  /* band-photo--shows: remove absolute positioning, flow into doc */
   .band-photo--shows {
     position: static;
-    margin: 0 auto 30px;
+    margin: 0 auto 36px;
     transform: rotate(-2deg);
-    width: 280px;
-    padding: 12px 12px 40px;
+    width: 260px;
   }
-  .shows-header { padding-left: 0; }
 
+  /* show-item: collapse to 2-col, wrap venue into full width */
   .show-item {
-    grid-template-columns: 90px 1fr auto;
-    gap: 20px;
-    padding: 28px 8px;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px 16px;
+    padding: 24px 8px;
+  }
+  .show-item .show-date {
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+  .show-city {
+    display: none; /* already set, just confirming */
+  }
+  .show-tag {
+    grid-column: 2;
+    align-self: start;
+    display: inline-block;
+    width: fit-content;
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+
+  .booking-detail-value {
+    font-size: 1rem;
   }
   .show-date-day { font-size: 38px; }
   .show-city { display: none; }
@@ -1329,4 +1360,25 @@ body::before {
   .marquee-track span { gap: 36px; }
   .lineup-grid { grid-template-columns: 1fr; }
   .lineup-member { border-right: none; }
+  .shows-header .section-title {
+    font-size: clamp(28px, 8vw, 44px);
+  }
+  .show-item {
+    gap: 6px 12px;
+    padding: 20px 8px;
+  }
+  .show-date-day {
+    font-size: 32px;
+  }
+  .show-venue {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .show-venue-sub {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .band-photo--shows {
+    width: 220px;
+  }
 }
