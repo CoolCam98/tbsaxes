@@ -156,7 +156,7 @@ body::before {
 }
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
   list-style: none;
 }
@@ -190,6 +190,12 @@ body::before {
 }
 .nav-cta:hover { background: var(--teal); }
 .nav-cta::after { display: none; }
+
+/* Generic "current page" nav highlight — same rule as .blog-nav-active */
+.nav-active {
+  color: var(--teal) !important;
+}
+.nav-active::after { width: 100% !important; }
 
 /* min touch target 44px per WCAG 2.5.8 */
 .nav-toggle {

@@ -39,6 +39,10 @@
   letter-spacing: 0.02em;
   pointer-events: none;
 }
+/* Reuses .blog-hero on non-blog pages — override the watermark word per page */
+.blog-hero[data-watermark]::after {
+  content: attr(data-watermark);
+}
 .blog-hero-inner {
   max-width: 1280px;
   margin: 0 auto;

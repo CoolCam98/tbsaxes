@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GKB8QVBGE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8GKB8QVBGE');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Book the Collective | Tampa Bay Saxophone Collective</title>
+  <meta name="description" content="Book the Tampa Bay Saxophone Collective for your wedding, corporate event, festival, or private party. Tell us your date and we'll get back to you within a day or two." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tbsaxes.com/book" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Tampa Bay Saxophone Collective" />
+  <meta property="og:title" content="Book the Collective | Tampa Bay Saxophone Collective" />
+  <meta property="og:description" content="Book the Tampa Bay Saxophone Collective for your wedding, corporate event, festival, or private party." />
+  <meta property="og:url" content="https://tbsaxes.com/book" />
+  <meta property="og:image" content="https://tbsaxes.com/assets/logos/logo-social-media-light.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Book the Collective | Tampa Bay Saxophone Collective" />
+  <meta name="twitter:description" content="Book the Tampa Bay Saxophone Collective for your wedding, corporate event, festival, or private party." />
+  <meta name="twitter:image" content="https://tbsaxes.com/assets/logos/logo-social-media-light.png" />
+
+  <link rel="icon" type="image/png" href="/assets/logos/logo-social-media-light.png" />
+  <link rel="apple-touch-icon" href="/assets/logos/logo-social-media-light.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/blog.css">
+</head>
+<body>
+
+<!-- Hidden form for Netlify build-time detection.
+     aria-hidden so screen readers skip it entirely. -->
+<form name="booking" netlify netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input type="text"  name="name" />
+  <input type="email" name="email" />
+  <input type="date"  name="event-date" />
+  <input type="text"  name="event-type" />
+  <input type="text"  name="venue" />
+  <textarea           name="details"></textarea>
+  <input              name="bot-field" />
+</form>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="nav scrolled" id="nav">
+  <a href="/" class="nav-logo">
+    <img src="/assets/logos/logo-social-media-light.png" alt="Tampa Bay Saxophone Collective logo">
+    <span class="nav-logo-text">
+      Tampa Bay
+      <small>Saxophone Collective</small>
+    </span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#lineup">Lineup</a></li>
+    <li><a href="/services">Services</a></li>
+    <li><a href="/shows">Shows</a></li>
+    <li><a href="/#listen">Listen</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/book" class="nav-cta">Book</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle">Menu</button>
+</nav>
+
+<main id="main">
+  <!-- ============ BOOKING ============ -->
+  <section class="booking" id="booking">
+    <div class="booking-inner">
+      <div>
+        <div class="section-kicker">Booking</div>
+        <h1 class="section-title">Bring us <em>to your room.</em></h1>
+        <p class="booking-intro">
+          Weddings, corporate events, festivals, private parties — if you've got a room and a reason, we'll show up with our horns and a pretty good set list.
+        </p>
+
+        <div class="booking-details">
+          <div class="booking-detail">
+            <div class="booking-detail-label">Email</div>
+            <div class="booking-detail-value">
+              <a href="mailto:tbsaxcollective@gmail.com">tbsaxcollective@gmail.com</a>
+            </div>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-label">Travel</div>
+            <div class="booking-detail-value regular">Central Florida</div>
+          </div>
+        </div>
+      </div>
+
+      <form
+        class="form"
+        id="bookingForm"
+        name="booking"
+        method="POST"
+        action="/thanks"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onsubmit="handleSubmit(event)"
+      >
+        <!-- Required by Netlify -->
+        <input type="hidden" name="form-name" value="booking" />
+
+        <!-- Honeypot — hidden from real users, visually and from screen readers -->
+        <p class="visually-hidden" aria-hidden="true">
+          <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input class="form-input" type="text" id="name" name="name"
+              autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email"
+              autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="date">Event Date</label>
+            <input class="form-input" type="date" id="date" name="event-date">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="type">Event Type</label>
+            <select class="form-select" id="type" name="event-type">
+              <option>Wedding</option>
+              <option>Corporate</option>
+              <option>Festival</option>
+              <option>Sax-O-Gram</option>
+              <option>Private Party</option>
+              <option>Club / Venue</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="venue">Venue / Location</label>
+          <input class="form-input" type="text" id="venue" name="venue"
+            autocomplete="street-address">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="details">Tell us about it</label>
+          <textarea class="form-textarea" id="details" name="details"></textarea>
+        </div>
+
+        <button type="submit" class="btn form-submit">
+          Send Inquiry <span class="arrow" aria-hidden="true">→</span>
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assets/logos/logo-social-media-light.png" alt="Tampa Bay Saxophone Collective logo">
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/tbsaxcollective/" rel="noopener me" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/tbsaxcollective/" rel="noopener me" target="_blank">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:tbsaxcollective@gmail.com">tbsaxcollective@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Tampa Bay Saxophone Collective</div>
+      <div>All Rights Reserved</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.textContent = navLinks.classList.contains('open') ? 'Close' : 'Menu';
+    });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form        = e.target;
+    const btn         = form.querySelector('button[type="submit"]');
+    const originalHtml = btn.innerHTML;
+
+    btn.innerHTML = 'Sending...';
+    btn.disabled  = true;
+    btn.style.opacity = '0.7';
+
+    const body = new URLSearchParams(new FormData(form)).toString();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Submission failed: ' + response.status);
+        window.location.href = '/thanks';
+      })
+      .catch((err) => {
+        console.error('Form submission error:', err);
+        btn.innerHTML = 'Something Went Wrong · Try Again';
+        btn.classList.add('btn--error');
+        btn.style.opacity = '1';
+
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+          btn.disabled  = false;
+          btn.classList.remove('btn--error');
+          btn.style.opacity = '';
+        }, 4000);
+      });
+  }
+</script>
+</body>
+</html>
