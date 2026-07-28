@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
 
   <script type="application/ld+json">
   {
@@ -58,6 +58,47 @@
     ],
     "description": "A surprise live saxophone visit for birthdays, office holiday parties, anniversaries, proposals, and other celebrations across the Tampa Bay area.",
     "url": "https://tbsaxes.com/sax-o-grams"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much notice do you need to book a Sax-O-Gram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sooner the better, but reach out even if your event is coming up soon — availability might work out."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can someone else book it as a surprise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, that's how it usually works. A coworker, partner, or friend typically handles the booking so the guest of honor has no idea it's coming."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many musicians come for a Sax-O-Gram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As few as one or two, or the full six-piece group — whatever fits the moment and space you have in mind."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you cover for Sax-O-Grams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in Tampa and cover the greater Tampa Bay area and central Florida."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -86,49 +127,154 @@
 </nav>
 
 <main id="main">
-<article class="blog-post">
-  <div class="blog-post-meta">
-    <span class="blog-card-tag">Surprise</span>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#0f435f"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Surprise Visits</div>
+      <h1 class="section-title">Sax-O-Grams — <em>A Surprise Worth Remembering.</em></h1>
+      <p class="page-hero-tagline">
+        Think of it as a singing telegram, but with saxophones. Book us to show up somewhere and play a short surprise set for someone who has <em>no idea it's coming.</em>
+      </p>
+      <div class="page-hero-ctas">
+        <a href="/book" class="btn btn-primary">Book a Sax-O-Gram <span class="arrow">→</span></a>
+        <a href="#occasions" class="btn btn-ghost">See Great Occasions <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Occasions we play Sax-O-Grams for">
+    <div class="marquee-track">
+      <span>
+        Birthdays              <span class="dot" aria-hidden="true">●</span>
+        Work Anniversaries     <span class="dot" aria-hidden="true">●</span>
+        Retirements            <span class="dot" aria-hidden="true">●</span>
+        Holiday Surprises      <span class="dot" aria-hidden="true">●</span>
+        Proposals              <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Birthdays              <span class="dot">●</span>
+        Work Anniversaries     <span class="dot">●</span>
+        Retirements            <span class="dot">●</span>
+        Holiday Surprises      <span class="dot">●</span>
+        Proposals              <span class="dot">●</span>
+      </span>
+    </div>
   </div>
-  <h1 class="blog-post-title">Sax-O-Grams — <em>A Surprise Worth Remembering.</em></h1>
 
-  <img class="blog-post-hero-img" src="/assets/photos/band-3.jpg" alt="Members of the Tampa Bay Saxophone Collective smiling together">
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section">
+    <div class="section-kicker">How It Works</div>
+    <h2 class="section-title">You tell us who, <em>where, and why.</em></h2>
 
-  <div class="blog-post-body">
-    <p>Think of it as a singing telegram, but with saxophones. Book us to show up somewhere — an office, a backyard, a restaurant table — and play a short surprise set for someone who has no idea it's coming.</p>
+    <div class="about">
+      <div class="about-copy">
+        <p>We show up — with as few as one or two players, or the full six-piece kit if you want to make a bigger splash — play a short set, and make somebody's day. No rehearsal needed on your end, just point us in the right direction and we'll handle the rest.</p>
+        <p>If you're coordinating a surprise, it's usually easiest for someone other than the guest of honor — a coworker, a partner, a friend — to handle the booking with us, so the moment stays a genuine surprise.</p>
+      </div>
 
-    <h2>How It Works</h2>
+      <figure class="band-photo band-photo--about">
+        <img src="/assets/photos/band-3.jpg" alt="Members of the Tampa Bay Saxophone Collective smiling together" loading="lazy">
+      </figure>
+    </div>
+  </section>
 
-    <p>You tell us who, where, and why. We show up — with as few as one or two players, or the full six-piece kit if you want to make a bigger splash — play a short set, and make somebody's day. No rehearsal needed on your end, just point us in the right direction and we'll handle the rest.</p>
+  <!-- ============ GREAT FOR ============ -->
+  <section class="tinted-section" id="occasions">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">Great For</div>
+      <h2 class="section-title">Any moment worth <em>celebrating.</em></h2>
 
-    <h2>Great For</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Birthdays</h3>
+          <p>A surprise set that turns a regular birthday into one people talk about for years.</p>
+        </div>
+        <div class="info-card">
+          <h3>Work Anniversaries &amp; Retirements</h3>
+          <p>Send a coworker off — or celebrate a milestone — with something better than a cake in the break room.</p>
+        </div>
+        <div class="info-card">
+          <h3>Holiday Office Surprises</h3>
+          <p>A live horn walk-through turns an ordinary office holiday party into an event.</p>
+        </div>
+        <div class="info-card">
+          <h3>Proposals</h3>
+          <p>Live music at the exact right moment — we'll work with you on timing and cues.</p>
+        </div>
+        <div class="info-card">
+          <h3>Just Because</h3>
+          <p>No occasion required. Sometimes a surprise is its own reason.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <ul>
-      <li>Birthdays</li>
-      <li>Work anniversaries &amp; retirements</li>
-      <li>Holiday office surprises</li>
-      <li>Proposals</li>
-      <li>Just because</li>
-    </ul>
+  <!-- ============ SMALL GROUP OR THE WHOLE KIT ============ -->
+  <section class="lineup">
+    <div class="lineup-inner">
+      <div class="section-kicker">Built to Flex</div>
+      <h2 class="section-title">A few of us, or <em>the whole kit.</em></h2>
 
-    <h2>A Few of Us, or the Whole Kit</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Small Group</h3>
+          <p>One or two horns walking up to a desk or a table — intimate, quiet enough for an office or a restaurant, and still unmistakably live.</p>
+        </div>
+        <div class="info-card">
+          <h3>The Whole Kit</h3>
+          <p>All six of us, turning a room into a party for a few minutes — the full sound, for when you want the surprise to be impossible to miss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>Sax-O-Grams are built to flex. Want something intimate — one or two horns walking up to a table or a desk? We can do that. Want the full band showing up to turn an office into a party for ten minutes? We can do that too. Tell us the vibe you're going for and we'll bring the right size group for it.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="section-kicker">Good to Know</div>
+    <h2 class="section-title">Sax-O-Gram <em>FAQ.</em></h2>
 
-    <h2>Booking a Sax-O-Gram</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">How much notice do you need to book a Sax-O-Gram?</div>
+        <p class="faq-answer">The sooner the better, but reach out even if your event is coming up soon — availability might work out.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can someone else book it as a surprise?</div>
+        <p class="faq-answer">Yes, that's how it usually works. A coworker, partner, or friend typically handles the booking so the guest of honor has no idea it's coming.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How many musicians come for a Sax-O-Gram?</div>
+        <p class="faq-answer">As few as one or two, or the full six-piece group — whatever fits the moment and space you have in mind.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What areas do you cover for Sax-O-Grams?</div>
+        <p class="faq-answer">We're based in Tampa and cover the greater Tampa Bay area and central Florida.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- TODO: add real pricing once provided -->
-    <p>Every quote is built around group size and location, so we don't post a flat rate here — reach out with the details and we'll get you real numbers within a day or two. If you're coordinating a surprise, it's usually easiest for someone other than the guest of honor (a coworker, a partner, a friend) to handle the booking with us.</p>
-  </div>
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <div class="section-kicker">Plan a Surprise</div>
+      <h2 class="section-title">Let's put it <em>together.</em></h2>
+      <p class="page-cta-sub">
+        Every quote is built around group size and location — tell us who it's for and we'll get you real numbers within a day or two.
+      </p>
+      <div class="page-cta-actions">
+        <a href="/book" class="btn btn-primary">Book a Sax-O-Gram <span class="arrow">→</span></a>
+        <a href="/services" class="btn btn-ghost">← Back to Services</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="blog-cta">
-    <div class="blog-cta-title">Plan a Surprise</div>
-    <div class="blog-cta-sub">Tell us who it's for and we'll help you put it together.</div>
-    <a href="/book" class="btn btn-primary">Book a Sax-O-Gram <span class="arrow">→</span></a>
-  </div>
-
-  <a href="/services" class="blog-post-back">← Back to Services</a>
-</article>
 </main>
 
 <footer class="footer">

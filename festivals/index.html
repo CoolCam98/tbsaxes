@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
 
   <script type="application/ld+json">
   {
@@ -58,6 +58,47 @@
     ],
     "description": "Live saxophone and horn music for festival stages, breweries, restaurant residencies, and outdoor events across central Florida.",
     "url": "https://tbsaxes.com/festivals"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What set lengths can you play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anywhere from a short 20-minute festival slot to a multi-hour residency set — we build the set list to fit your time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you need us to provide a stage or power?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the venue. Tell us your stage size and power access and we'll work with what's available, bringing our own amplification for smaller setups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you play multiple sets over a few hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we regularly play multi-set bookings at breweries and restaurant residencies, adjusting energy as the day goes on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we book a festival slot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fill out our booking form with your event details and we'll follow up with availability and pricing."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -86,47 +127,153 @@
 </nav>
 
 <main id="main">
-<article class="blog-post">
-  <div class="blog-post-meta">
-    <span class="blog-card-tag">Festivals</span>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#14273d"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Festivals &amp; Outdoor Stages</div>
+      <h1 class="section-title">Live Saxophone for <em>Outdoor Energy.</em></h1>
+      <p class="page-hero-tagline">
+        A six-piece horn section is built for outdoor energy — real saxophones project across a crowd in a way backing tracks and small PA speakers never quite manage.
+      </p>
+      <div class="page-hero-ctas">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="#where-we-play" class="btn btn-ghost">Where We Play <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Outdoor venue types we perform at">
+    <div class="marquee-track">
+      <span>
+        Festival Stages         <span class="dot" aria-hidden="true">●</span>
+        Breweries               <span class="dot" aria-hidden="true">●</span>
+        Restaurant Residencies  <span class="dot" aria-hidden="true">●</span>
+        Street Festivals        <span class="dot" aria-hidden="true">●</span>
+        Outdoor Markets         <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Festival Stages         <span class="dot">●</span>
+        Breweries               <span class="dot">●</span>
+        Restaurant Residencies  <span class="dot">●</span>
+        Street Festivals        <span class="dot">●</span>
+        Outdoor Markets         <span class="dot">●</span>
+      </span>
+    </div>
   </div>
-  <h1 class="blog-post-title">Live Saxophone for <em>Festivals &amp; Outdoor Stages.</em></h1>
 
-  <img class="blog-post-hero-img" src="/assets/photos/band-2.jpg" alt="The Tampa Bay Saxophone Collective performing live">
+  <!-- ============ BUILT FOR OUTDOOR ENERGY ============ -->
+  <section class="section">
+    <div class="section-kicker">Built for the Outdoors</div>
+    <h2 class="section-title">No backing tracks, <em>no laptop.</em></h2>
 
-  <div class="blog-post-body">
-    <p>A six-piece horn section is built for outdoor energy. Real saxophones project across a crowd in a way backing tracks and small PA speakers never quite manage, and we adjust our set length and intensity to fit anything from a twenty-minute festival slot to a multi-hour residency.</p>
+    <div class="about">
+      <div class="about-copy">
+        <p>Short set, long set — we build the set list to fit your slot and keep the energy moving the whole time. Our genre range (jazz, funk, soul, pop, R&amp;B) means we can hold a festival crowd's attention whether we're opening the day or closing it out.</p>
+        <p>Recurring gigs on a patio or in an outdoor seating area are a great fit for this format too — background-friendly during earlier hours, building toward a more energetic set as the night goes on. We're comfortable holding a room for a few hours without repeating ourselves.</p>
+      </div>
 
-    <h2>Festival Stages</h2>
+      <figure class="band-photo band-photo--about">
+        <img src="/assets/photos/band-2.jpg" alt="The Tampa Bay Saxophone Collective performing live" loading="lazy">
+      </figure>
+    </div>
+  </section>
 
-    <p>Short set, long set — we build the set list to fit your slot and keep the energy moving the whole time. Our genre range (jazz, funk, soul, pop, R&amp;B) means we can hold a festival crowd's attention whether we're opening the day or closing it out.</p>
+  <!-- ============ WHERE WE PLAY ============ -->
+  <section class="tinted-section" id="where-we-play">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">Where We Play</div>
+      <h2 class="section-title">Any stage, <em>any crowd.</em></h2>
 
-    <h2>Breweries &amp; Restaurant Residencies</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-num">01</span>
+          <h3>Festival Stages</h3>
+          <p>Twenty-minute slots to full-length sets, with a genre range built to hold a festival crowd's attention.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">02</span>
+          <h3>Breweries &amp; Residencies</h3>
+          <p>Recurring patio and outdoor-seating gigs — background-friendly early, building energy as the night goes on.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">03</span>
+          <h3>Street &amp; Community Events</h3>
+          <p>Outdoor markets, art walks, and block parties — anywhere people move through a space rather than sit in front of a stage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>Recurring gigs on a patio or in an outdoor seating area are a great fit for this format — background-friendly during earlier hours, building toward a more energetic set as the night goes on. We're comfortable holding a room for a few hours without repeating ourselves.</p>
+  <!-- ============ VENUE LOGISTICS ============ -->
+  <section class="lineup">
+    <div class="lineup-inner">
+      <div class="section-kicker">What We Need From the Venue</div>
+      <h2 class="section-title">Simple <em>logistics.</em></h2>
 
-    <h2>Street Festivals &amp; Community Events</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Stage Size</h3>
+          <p>Tell us how much room you've got and we'll size the group and setup to fit it.</p>
+        </div>
+        <div class="info-card">
+          <h3>Power Access</h3>
+          <p>For smaller setups we bring our own amplification. For festival stages, we're happy to work off house sound.</p>
+        </div>
+        <div class="info-card">
+          <h3>Set Length</h3>
+          <p>Whatever your slot calls for — a tight twenty minutes or a multi-hour residency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>Outdoor markets, art walks, block parties — anywhere people are moving through a space rather than seated in front of a stage, live horns are a great way to draw people in and hold a crowd for a few songs at a time.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="section-kicker">Good to Know</div>
+    <h2 class="section-title">Festival <em>FAQ.</em></h2>
 
-    <h2>What We Need From the Venue</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">What set lengths can you play?</div>
+        <p class="faq-answer">Anywhere from a short 20-minute festival slot to a multi-hour residency set — we build the set list to fit your time.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you need us to provide a stage or power?</div>
+        <p class="faq-answer">It depends on the venue. Tell us your stage size and power access and we'll work with what's available, bringing our own amplification for smaller setups.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can you play multiple sets over a few hours?</div>
+        <p class="faq-answer">Yes, we regularly play multi-set bookings at breweries and restaurant residencies, adjusting energy as the day goes on.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do we book a festival slot?</div>
+        <p class="faq-answer">Fill out our booking form with your event details and we'll follow up with availability and pricing.</p>
+      </div>
+    </div>
+  </section>
 
-    <p>Every outdoor setup is a little different. Tell us your stage size and power access and we'll make it work — for smaller setups we can bring our own amplification, and for larger festival stages we're happy to work off house sound.</p>
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <div class="section-kicker">Booking a Slot?</div>
+      <h2 class="section-title">Let's book <em>your stage.</em></h2>
+      <p class="page-cta-sub">
+        Every quote is built around group size, set length, and location — tell us about your stage and slot and we'll let you know if we're the right fit.
+      </p>
+      <div class="page-cta-actions">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="/services" class="btn btn-ghost">← Back to Services</a>
+      </div>
+    </div>
+  </section>
 
-    <h2>Booking a Festival Slot</h2>
-
-    <!-- TODO: add real pricing once provided -->
-    <p>Every quote is built around group size, set length, and location, so we don't post a flat rate here — reach out with your event details and we'll get you real numbers within a day or two.</p>
-  </div>
-
-  <div class="blog-cta">
-    <div class="blog-cta-title">Booking a Festival or Outdoor Event?</div>
-    <div class="blog-cta-sub">Tell us about your stage and slot and we'll let you know if we're the right fit.</div>
-    <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
-  </div>
-
-  <a href="/services" class="blog-post-back">← Back to Services</a>
-</article>
 </main>
 
 <footer class="footer">

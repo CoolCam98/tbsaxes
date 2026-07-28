@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
 
   <script type="application/ld+json">
   {
@@ -58,6 +58,47 @@
     ],
     "description": "Live saxophone and horn music for corporate parties, brand activations, and networking receptions across the Tampa Bay area.",
     "url": "https://tbsaxes.com/corporate-events"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you match the tone of a formal corporate event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — we regularly play polished, background-level sets for receptions and networking events, and can scale up the energy for celebrations later in the evening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide your own sound equipment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For smaller indoor settings we can bring our own amplification. For larger venues we're happy to work off house sound — just let us know what's available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much advance notice do you need for a corporate event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sooner the better, especially for December holiday parties, which book up early. That said, reach out even on short notice — availability might surprise you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we get a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fill out our booking form with your event details and we'll follow up with real numbers within a day or two."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -86,47 +127,157 @@
 </nav>
 
 <main id="main">
-<article class="blog-post">
-  <div class="blog-post-meta">
-    <span class="blog-card-tag">Corporate</span>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#0f435f"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Corporate &amp; Brand Events</div>
+      <h1 class="section-title">Live Saxophone for <em>Your Next Event.</em></h1>
+      <p class="page-hero-tagline">
+        Music that sounds sophisticated enough for a room full of clients and executives, and still brings <em>real energy</em> when the event calls for it.
+      </p>
+      <div class="page-hero-ctas">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="#what-we-play" class="btn btn-ghost">See What We Cover <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Corporate event types we perform at">
+    <div class="marquee-track">
+      <span>
+        Brand Activations      <span class="dot" aria-hidden="true">●</span>
+        Holiday Parties        <span class="dot" aria-hidden="true">●</span>
+        Product Launches       <span class="dot" aria-hidden="true">●</span>
+        Networking Receptions  <span class="dot" aria-hidden="true">●</span>
+        Conferences            <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Brand Activations      <span class="dot">●</span>
+        Holiday Parties        <span class="dot">●</span>
+        Product Launches       <span class="dot">●</span>
+        Networking Receptions  <span class="dot">●</span>
+        Conferences            <span class="dot">●</span>
+      </span>
+    </div>
   </div>
-  <h1 class="blog-post-title">Live Saxophone for <em>Corporate &amp; Brand Events.</em></h1>
 
-  <img class="blog-post-hero-img" src="/assets/photos/band-1.jpg" alt="The Tampa Bay Saxophone Collective performing at a live event">
+  <!-- ============ MUSIC THAT READS THE ROOM ============ -->
+  <section class="section">
+    <div class="section-kicker">How We Fit the Room</div>
+    <h2 class="section-title">Music that reads <em>the room.</em></h2>
 
-  <div class="blog-post-body">
-    <p>Corporate events need music that can do two jobs at once — sound sophisticated enough for a room full of clients or executives, and still bring real energy when the event calls for it. A saxophone group hits both without needing a stage, a full PA rig, or an hour-long soundcheck eating into your event timeline.</p>
+    <div class="about">
+      <div class="about-copy">
+        <p>Live horns cut through a crowded activation or launch event in a way a playlist just can't — they draw people in, hold attention at a booth or step-and-repeat, and give your brand moment an actual pulse. We adjust volume and energy to fit foot traffic and the flow of the space.</p>
+        <p>We show up on time, dress appropriately for the room, and can scale between a background-level presence and a full performance depending on what the event calls for. No pre-recorded tracks, no laptop on stage — just a group of musicians who know how to read a corporate room.</p>
+      </div>
 
-    <h2>Brand Activations &amp; Product Launches</h2>
+      <figure class="band-photo band-photo--about">
+        <img src="/assets/photos/band-1.jpg" alt="The Tampa Bay Saxophone Collective performing at a live event" loading="lazy">
+      </figure>
+    </div>
+  </section>
 
-    <p>Live horns cut through a crowded activation or launch event in a way a playlist just can't — they draw people in, hold attention at a booth or step-and-repeat, and give your brand moment an actual pulse. We adjust volume and energy to fit foot traffic and the flow of the space.</p>
+  <!-- ============ WHAT WE COVER ============ -->
+  <section class="tinted-section" id="what-we-play">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">What We Cover</div>
+      <h2 class="section-title">Every kind of <em>corporate room.</em></h2>
 
-    <h2>Holiday Parties &amp; Company Celebrations</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-num">01</span>
+          <h3>Brand Activations &amp; Launches</h3>
+          <p>Live horns draw people in and give your brand moment an actual pulse — better than a playlist at a booth or step-and-repeat.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">02</span>
+          <h3>Holiday Parties &amp; Celebrations</h3>
+          <p>Background jazz during a cocktail reception, easing into funk and soul as the night goes on, then a full dance set once the room's ready.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">03</span>
+          <h3>Conferences &amp; Receptions</h3>
+          <p>Polished and unobtrusive during registration, session breaks, and closing networking receptions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>Year-end parties and company celebrations are where we get to stretch out. Background jazz during a cocktail reception, easing into funk and soul as the night goes on, then a full dance set once the room's ready for it. We read the crowd instead of running a fixed script.</p>
+  <!-- ============ WHAT TO EXPECT ============ -->
+  <section class="lineup">
+    <div class="lineup-inner">
+      <div class="section-kicker">What to Expect</div>
+      <h2 class="section-title">Professional, <em>every time.</em></h2>
 
-    <h2>Conferences &amp; Networking Receptions</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>On Time, Every Time</h3>
+          <p>We arrive early enough to set up quietly and be ready before your guests are.</p>
+        </div>
+        <div class="info-card">
+          <h3>Dressed for the Room</h3>
+          <p>We match the formality of your event, from black-tie galas to casual happy hours.</p>
+        </div>
+        <div class="info-card">
+          <h3>Adjustable Energy</h3>
+          <p>Background-level during business hours, full performance when it's time to celebrate.</p>
+        </div>
+        <div class="info-card">
+          <h3>No Backing Tracks</h3>
+          <p>Six real musicians playing live — no laptop, no pre-recorded anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>During registration, breaks between sessions, or a closing networking reception, we keep things polished and unobtrusive — present enough to elevate the room, quiet enough that conversation and business still happen easily.</p>
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="section-kicker">Good to Know</div>
+    <h2 class="section-title">Corporate Event <em>FAQ.</em></h2>
 
-    <h2>What to Expect</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Can you match the tone of a formal corporate event?</div>
+        <p class="faq-answer">Yes — we regularly play polished, background-level sets for receptions and networking events, and can scale up the energy for celebrations later in the evening.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you provide your own sound equipment?</div>
+        <p class="faq-answer">For smaller indoor settings we can bring our own amplification. For larger venues we're happy to work off house sound — just let us know what's available.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How much advance notice do you need for a corporate event?</div>
+        <p class="faq-answer">The sooner the better, especially for December holiday parties, which book up early. That said, reach out even on short notice — availability might surprise you.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do we get a quote?</div>
+        <p class="faq-answer">Fill out our booking form with your event details and we'll follow up with real numbers within a day or two.</p>
+      </div>
+    </div>
+  </section>
 
-    <p>We show up on time, dress appropriately for the room, and can scale between a background-level presence and a full performance depending on what the event calls for. No pre-recorded tracks, no laptop on stage — just a group of musicians who know how to read a corporate room.</p>
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <div class="section-kicker">Planning an Event?</div>
+      <h2 class="section-title">Let's book <em>your event.</em></h2>
+      <p class="page-cta-sub">
+        Every quote is built around group size, set length, and location — tell us the date and vibe and we'll let you know if we're the right fit.
+      </p>
+      <div class="page-cta-actions">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="/services" class="btn btn-ghost">← Back to Services</a>
+      </div>
+    </div>
+  </section>
 
-    <h2>Booking a Corporate Event</h2>
-
-    <!-- TODO: add real pricing once provided -->
-    <p>Every quote is built around group size, set length, and location, so we don't post a flat rate here — reach out with your event details and we'll get you real numbers within a day or two. December fills up fast with holiday parties, so if you're planning one, the earlier you reach out the better.</p>
-  </div>
-
-  <div class="blog-cta">
-    <div class="blog-cta-title">Planning a Corporate Event?</div>
-    <div class="blog-cta-sub">Tell us the date and vibe and we'll let you know if we're the right fit.</div>
-    <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
-  </div>
-
-  <a href="/services" class="blog-post-back">← Back to Services</a>
-</article>
 </main>
 
 <footer class="footer">
