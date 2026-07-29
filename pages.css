@@ -6,7 +6,7 @@
 /* ---------- Page hero ---------- */
 .page-hero {
   position: relative;
-  padding: 200px 40px 130px;
+  padding: 200px 40px 200px;
   background: var(--cream);
   overflow: hidden;
   isolation: isolate;
@@ -210,7 +210,7 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .page-hero { padding: 150px 20px 90px; }
+  .page-hero { padding: 150px 20px 140px; }
   .info-grid { gap: 36px; margin-top: 40px; }
   .faq-list { margin-top: 40px; }
   .page-cta { padding: 80px 24px; }
