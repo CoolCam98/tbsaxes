@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
 
   <!-- Add one more MusicEvent script block like this per additional upcoming show. -->
   <!-- Include "offers" (price/ticket URL) on any show once real ticket info exists. -->
@@ -74,11 +74,8 @@
     </span>
   </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#lineup">Lineup</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/shows" class="nav-active">Shows</a></li>
-    <li><a href="/#listen">Listen</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/book" class="nav-cta">Book</a></li>
   </ul>
@@ -86,8 +83,68 @@
 </nav>
 
 <main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#0f435f"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Live</div>
+      <h1 class="section-title">Catch Us <em>Live.</em></h1>
+      <p class="page-hero-tagline">
+        Six musicians, no backing tracks, no laptop on stage — just a room full of jazz, funk, soul, and whatever else the night calls for.
+      </p>
+      <div class="page-hero-ctas">
+        <a href="#upcoming" class="btn btn-primary">See Upcoming Shows <span class="arrow">↓</span></a>
+        <a href="/book" class="btn btn-ghost">Book a Private Show <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Venue types we play">
+    <div class="marquee-track">
+      <span>
+        Festivals         <span class="dot" aria-hidden="true">●</span>
+        Breweries         <span class="dot" aria-hidden="true">●</span>
+        Private Events    <span class="dot" aria-hidden="true">●</span>
+        Brand Activations <span class="dot" aria-hidden="true">●</span>
+        Clubs             <span class="dot" aria-hidden="true">●</span>
+        Late-night Sets   <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Festivals         <span class="dot">●</span>
+        Breweries         <span class="dot">●</span>
+        Private Events    <span class="dot">●</span>
+        Brand Activations <span class="dot">●</span>
+        Clubs             <span class="dot">●</span>
+        Late-night Sets   <span class="dot">●</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ============ WHAT A SHOW FEELS LIKE ============ -->
+  <section class="section">
+    <div class="section-kicker">What to Expect</div>
+    <h2 class="section-title">What a show <em>feels like.</em></h2>
+
+    <div class="about">
+      <div class="about-copy">
+        <p>Five saxophones and a drummer, playing live in a room together — no backing tracks, no pre-recorded anything. We move through jazz, funk, soul, Motown, and pop, reading the crowd and adjusting the set as we go instead of running a fixed script.</p>
+        <p>Our public shows are usually where we're testing new material, playing with friends' bands, or just showing up somewhere fun — they're a good way to hear us before booking us for your own event. Follow along below so you don't miss the next one.</p>
+      </div>
+
+      <figure class="band-photo band-photo--about">
+        <img src="/assets/photos/band-3.jpg" alt="Members of the Tampa Bay Saxophone Collective performing together" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
   <!-- ============ SHOWS ============ -->
-  <section class="shows" id="shows">
+  <section class="shows" id="upcoming">
     <div class="shows-inner">
 
       <figure class="band-photo band-photo--shows">
@@ -97,7 +154,7 @@
       <div class="shows-header">
         <div>
           <div class="section-kicker">Upcoming</div>
-          <h1 class="section-title">Catch us <em>live.</em></h1>
+          <h2 class="section-title">What's <em>next.</em></h2>
         </div>
         <a href="/book" class="btn btn-ghost">Book a Private Show <span class="arrow">→</span></a>
       </div>
@@ -118,6 +175,48 @@
 
     </div>
   </section>
+
+  <!-- ============ FOLLOW ALONG ============ -->
+  <section class="tinted-section">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">Don't Miss the Next One</div>
+      <h2 class="section-title">Follow <em>along.</em></h2>
+
+      <div class="info-grid">
+        <a href="https://www.instagram.com/tbsaxcollective/" class="info-card" target="_blank" rel="noopener me">
+          <h3>Instagram</h3>
+          <p>Show announcements, clips from recent sets, and behind-the-scenes moments.</p>
+          <span class="info-card-link">Follow us <span class="arrow">↗</span></span>
+        </a>
+        <a href="https://www.facebook.com/tbsaxcollective/" class="info-card" target="_blank" rel="noopener me">
+          <h3>Facebook</h3>
+          <p>Event pages for our public shows, plus updates on where we're playing next.</p>
+          <span class="info-card-link">Follow us <span class="arrow">↗</span></span>
+        </a>
+        <a href="/services" class="info-card">
+          <h3>Book a Private Show</h3>
+          <p>Want us at your own event instead? See the kinds of events we play.</p>
+          <span class="info-card-link">Explore services <span class="arrow">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <div class="section-kicker">Want Us at Your Event?</div>
+      <h2 class="section-title">Bring the show <em>to you.</em></h2>
+      <p class="page-cta-sub">
+        Weddings, corporate events, festivals, private parties — tell us what you're planning and we'll show up with our horns and a pretty good set list.
+      </p>
+      <div class="page-cta-actions">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="/services" class="btn btn-ghost">← Explore Services</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">

@@ -37,7 +37,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far in advance should we book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The earlier the better, especially for Friday/Saturday dates between May and October, and for December holiday parties. That said, reach out even on short notice — availability might surprise you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a deposit required to hold a date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We'll go over deposit details once we've talked through your event and sent a quote — reach out and we'll walk you through it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we request specific songs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Tell us what matters to you — a first dance, a walk-in song, a favorite artist — and we'll work it into the set."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you travel to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in Tampa and regularly play across central Florida, including St. Petersburg, Clearwater, Sarasota, Lakeland, Brandon, and Orlando. We'll travel further for the right date."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -64,11 +105,8 @@
     </span>
   </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#lineup">Lineup</a></li>
     <li><a href="/services">Services</a></li>
     <li><a href="/shows">Shows</a></li>
-    <li><a href="/#listen">Listen</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/book" class="nav-cta">Book</a></li>
   </ul>
@@ -76,14 +114,83 @@
 </nav>
 
 <main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#14273d"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Booking</div>
+      <h1 class="section-title">Bring Us <em>to Your Room.</em></h1>
+      <p class="page-hero-tagline">
+        Weddings, corporate events, festivals, private parties — if you've got a room and a reason, we'll show up with our horns and a pretty good set list.
+      </p>
+      <div class="page-hero-ctas">
+        <a href="#form" class="btn btn-primary">Fill Out the Form <span class="arrow">↓</span></a>
+        <a href="mailto:tbsaxcollective@gmail.com" class="btn btn-ghost">Email Us Directly <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Event types we perform at">
+    <div class="marquee-track">
+      <span>
+        Weddings         <span class="dot" aria-hidden="true">●</span>
+        Festivals        <span class="dot" aria-hidden="true">●</span>
+        Corporate        <span class="dot" aria-hidden="true">●</span>
+        Private Events   <span class="dot" aria-hidden="true">●</span>
+        Brand Activations <span class="dot" aria-hidden="true">●</span>
+        Sax-O-Grams      <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Weddings         <span class="dot">●</span>
+        Festivals        <span class="dot">●</span>
+        Corporate        <span class="dot">●</span>
+        Private Events   <span class="dot">●</span>
+        Brand Activations <span class="dot">●</span>
+        Sax-O-Grams      <span class="dot">●</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- ============ HOW BOOKING WORKS ============ -->
+  <section class="tinted-section">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">How It Works</div>
+      <h2 class="section-title">Three steps to <em>lock in your date.</em></h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-num">01</span>
+          <h3>Fill Out the Form</h3>
+          <p>Tell us your date, venue, event type, and any details that help us understand what you're going for.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">02</span>
+          <h3>We Follow Up</h3>
+          <p>We'll get back to you within a day or two with availability and a real quote — no fixed packages, no pressure.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">03</span>
+          <h3>Lock In Your Date</h3>
+          <p>Once the details are settled, we hold your date and start building a set around your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ BOOKING ============ -->
-  <section class="booking" id="booking">
+  <section class="booking" id="form">
     <div class="booking-inner">
       <div>
-        <div class="section-kicker">Booking</div>
-        <h1 class="section-title">Bring us <em>to your room.</em></h1>
+        <div class="section-kicker">The Details</div>
+        <h2 class="section-title">Tell us about <em>your event.</em></h2>
         <p class="booking-intro">
-          Weddings, corporate events, festivals, private parties — if you've got a room and a reason, we'll show up with our horns and a pretty good set list.
+          The more we know going in, the better the quote — venue, guest count, and the kind of energy you're picturing all help.
         </p>
 
         <div class="booking-details">
@@ -167,6 +274,32 @@
       </form>
     </div>
   </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="section-kicker">Good to Know</div>
+    <h2 class="section-title">Booking <em>FAQ.</em></h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">How far in advance should we book?</div>
+        <p class="faq-answer">The earlier the better, especially for Friday/Saturday dates between May and October, and for December holiday parties. That said, reach out even on short notice — availability might surprise you.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is a deposit required to hold a date?</div>
+        <p class="faq-answer">We'll go over deposit details once we've talked through your event and sent a quote — reach out and we'll walk you through it.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can we request specific songs?</div>
+        <p class="faq-answer">Yes. Tell us what matters to you — a first dance, a walk-in song, a favorite artist — and we'll work it into the set.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What areas do you travel to?</div>
+        <p class="faq-answer">We're based in Tampa and regularly play across central Florida, including St. Petersburg, Clearwater, Sarasota, Lakeland, Brandon, and Orlando. We'll travel further for the right date.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">

@@ -113,6 +113,31 @@
 .lineup .info-card h3 { color: var(--cream); }
 .lineup .info-card p { color: var(--steel-soft); }
 
+/* Clickable variant — an .info-card that is itself an <a> */
+a.info-card {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+a.info-card:hover { transform: translateX(4px); }
+a.info-card:hover h3 { color: var(--teal); }
+.lineup a.info-card:hover h3 { color: var(--steel); }
+.info-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.lineup .info-card-link { color: var(--steel); }
+a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
+.info-card-link .arrow { display: inline-block; transition: transform 0.2s ease; }
+
 /* ---------- FAQ ---------- */
 .faq-list {
   border-top: 1px solid rgba(20, 39, 61, 0.2);

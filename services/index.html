@@ -24,14 +24,14 @@
   <meta property="og:title" content="Services — Tampa Bay Saxophone Collective" />
   <meta property="og:description" content="Live saxophone and horn music for weddings, corporate events, festivals, and surprise Sax-O-Grams across Tampa Bay and central Florida." />
   <meta property="og:url" content="https://tbsaxes.com/services" />
-  <meta property="og:image" content="https://tbsaxes.com/assets/logos/logo-social-media-light.png" />
+  <meta property="og:image" content="https://tbsaxes.com/assets/photos/band-1.jpg" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Services — Tampa Bay Saxophone Collective" />
   <meta name="twitter:description" content="Live saxophone music for weddings, corporate events, festivals, and surprise Sax-O-Grams." />
-  <meta name="twitter:image" content="https://tbsaxes.com/assets/logos/logo-social-media-light.png" />
+  <meta name="twitter:image" content="https://tbsaxes.com/assets/photos/band-1.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/logos/logo-social-media-light.png" />
@@ -42,7 +42,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do we know which service fits our event?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with what kind of event you're planning — a wedding, a corporate party, a festival slot, or a surprise visit — and reach out with the details. We'll help you figure out group size and set length from there."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far do you travel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're based in Tampa and regularly play across central Florida, including St. Petersburg, Clearwater, Sarasota, Lakeland, Brandon, and Orlando. We'll travel further for the right date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we get pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every quote is built around group size, set length, and location, so we don't post flat rates. Fill out our booking form with your event details and we'll follow up with real numbers within a day or two."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you combine services, like a Sax-O-Gram at a corporate holiday party?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Tell us what you're picturing and we'll help you build it — plenty of our bookings mix and match."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -58,11 +99,8 @@
     </span>
   </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#lineup">Lineup</a></li>
     <li><a href="/services" class="nav-active">Services</a></li>
     <li><a href="/shows">Shows</a></li>
-    <li><a href="/#listen">Listen</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="/book" class="nav-cta">Book</a></li>
   </ul>
@@ -70,88 +108,168 @@
 </nav>
 
 <main id="main">
-<section class="blog-hero" data-watermark="SERVICES">
-  <div class="blog-hero-inner">
-    <h1 class="section-title blog-title">Music for <em>every kind of room.</em></h1>
-    <p class="blog-subtitle">From wedding ceremonies to corporate holiday parties to festival stages — here's how we show up for each one.</p>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="page-hero-plate" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,80 Q240,55 480,80 T960,80 T1440,80 L1440,200 L0,200 Z" fill="#14273d"/>
+      </svg>
+    </div>
+    <div class="page-hero-inner">
+      <div class="section-kicker">Services</div>
+      <h1 class="section-title">Music for <em>Every Kind of Room.</em></h1>
+      <p class="page-hero-tagline">
+        One band, five saxophones, one drummer — built to adapt to <em>weddings, corporate events, festivals,</em> and anything else worth celebrating.
+      </p>
+      <div class="page-hero-ctas">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="/shows" class="btn btn-ghost">See Upcoming Shows <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" role="marquee" aria-label="Event types we perform at">
+    <div class="marquee-track">
+      <span>
+        Weddings         <span class="dot" aria-hidden="true">●</span>
+        Corporate Events <span class="dot" aria-hidden="true">●</span>
+        Festivals        <span class="dot" aria-hidden="true">●</span>
+        Sax-O-Grams      <span class="dot" aria-hidden="true">●</span>
+        Private Parties  <span class="dot" aria-hidden="true">●</span>
+        Brand Activations <span class="dot" aria-hidden="true">●</span>
+      </span>
+      <span aria-hidden="true">
+        Weddings         <span class="dot">●</span>
+        Corporate Events <span class="dot">●</span>
+        Festivals        <span class="dot">●</span>
+        Sax-O-Grams      <span class="dot">●</span>
+        Private Parties  <span class="dot">●</span>
+        Brand Activations <span class="dot">●</span>
+      </span>
+    </div>
   </div>
-</section>
 
-<section class="blog-feed">
+  <!-- ============ ONE BAND, EVERY EVENT ============ -->
+  <section class="section">
+    <div class="section-kicker">How We Work</div>
+    <h2 class="section-title">One band, <em>every kind of event.</em></h2>
 
-  <article class="blog-card">
-    <a href="/weddings" class="blog-card-image-link">
-      <div class="blog-card-image" style="background-image: url('/assets/photos/band-3.jpg');"></div>
-    </a>
-    <div class="blog-card-body">
-      <div class="blog-card-meta">
-        <span class="blog-card-tag">Weddings</span>
+    <div class="about">
+      <div class="about-copy">
+        <p>We're five saxophones and a drummer, and we scale to fit the room. A duo for a quiet ceremony, the full six-piece for a dance floor, or anything in between — we figure out what your event actually needs instead of showing up with a fixed package.</p>
+        <p>No backing tracks, no laptop on stage. Every note you hear is played live, which means we can shift genre and energy in real time — dial it down for a networking reception, bring it up for a wedding reception, or hold a festival crowd's attention for a full set. The four pages below break down how that looks for specific kinds of events, but the short version is: tell us what you're planning, and we'll tell you how we'd approach it.</p>
       </div>
-      <h2 class="blog-card-title">
-        <a href="/weddings">Live Saxophone for Weddings</a>
-      </h2>
-      <p class="blog-card-excerpt">
-        Ceremony, cocktail hour, and reception — a set that adapts to every part of your day, with a typical wedding timeline broken down.
-      </p>
-      <a href="/weddings" class="blog-card-read">See how it works <span class="arrow">→</span></a>
-    </div>
-  </article>
 
-  <article class="blog-card">
-    <a href="/corporate-events" class="blog-card-image-link">
-      <div class="blog-card-image" style="background-image: url('/assets/photos/band-1.jpg');"></div>
-    </a>
-    <div class="blog-card-body">
-      <div class="blog-card-meta">
-        <span class="blog-card-tag">Corporate</span>
+      <figure class="band-photo band-photo--about">
+        <img src="/assets/photos/band-1.jpg" alt="The Tampa Bay Saxophone Collective performing at a live event" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INCLUDED EVERY TIME ============ -->
+  <section class="tinted-section">
+    <div class="tinted-section-inner">
+      <div class="section-kicker">Every Booking, Every Time</div>
+      <h2 class="section-title">What's included, <em>no matter the event.</em></h2>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="info-card-num">01</span>
+          <h3>Live Musicians Only</h3>
+          <p>No backing tracks, no pre-recorded anything — six real musicians playing together in a room.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">02</span>
+          <h3>Adjustable Energy</h3>
+          <p>We read the room and scale between background presence and a full dance-floor set.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">03</span>
+          <h3>Central Florida Travel</h3>
+          <p>Based in Tampa, covering St. Petersburg, Clearwater, Sarasota, Lakeland, and Orlando without blinking.</p>
+        </div>
+        <div class="info-card">
+          <span class="info-card-num">04</span>
+          <h3>Professional &amp; Reliable</h3>
+          <p>On time, dressed for the room, and easy to communicate with from booking to load-out.</p>
+        </div>
       </div>
-      <h2 class="blog-card-title">
-        <a href="/corporate-events">Corporate &amp; Brand Events</a>
-      </h2>
-      <p class="blog-card-excerpt">
-        Holiday parties, brand activations, and receptions that call for music that reads the room and knows when to turn it up.
-      </p>
-      <a href="/corporate-events" class="blog-card-read">See how it works <span class="arrow">→</span></a>
     </div>
-  </article>
+  </section>
 
-  <article class="blog-card">
-    <a href="/festivals" class="blog-card-image-link">
-      <div class="blog-card-image" style="background-image: url('/assets/photos/band-2.jpg');"></div>
-    </a>
-    <div class="blog-card-body">
-      <div class="blog-card-meta">
-        <span class="blog-card-tag">Festivals</span>
+  <!-- ============ EXPLORE OUR SERVICES ============ -->
+  <section class="lineup">
+    <div class="lineup-inner">
+      <div class="section-kicker">Explore Our Services</div>
+      <h2 class="section-title">Find your <em>kind of event.</em></h2>
+
+      <div class="info-grid">
+        <a href="/weddings" class="info-card">
+          <h3>Weddings</h3>
+          <p>Ceremony, cocktail hour, and reception — a set that adapts to every part of your day.</p>
+          <span class="info-card-link">See how it works <span class="arrow">→</span></span>
+        </a>
+        <a href="/corporate-events" class="info-card">
+          <h3>Corporate &amp; Brand Events</h3>
+          <p>Holiday parties, brand activations, and receptions that call for music that reads the room.</p>
+          <span class="info-card-link">See how it works <span class="arrow">→</span></span>
+        </a>
+        <a href="/festivals" class="info-card">
+          <h3>Festivals &amp; Outdoor Stages</h3>
+          <p>Full horn energy for festival stages, breweries, and outdoor events — no backing tracks needed.</p>
+          <span class="info-card-link">See how it works <span class="arrow">→</span></span>
+        </a>
+        <a href="/sax-o-grams" class="info-card">
+          <h3>Sax-O-Grams</h3>
+          <p>A surprise saxophone visit for birthdays, office holidays, and anything worth celebrating.</p>
+          <span class="info-card-link">See how it works <span class="arrow">→</span></span>
+        </a>
       </div>
-      <h2 class="blog-card-title">
-        <a href="/festivals">Festivals &amp; Outdoor Stages</a>
-      </h2>
-      <p class="blog-card-excerpt">
-        Full horn energy for festival stages, breweries, and outdoor events across central Florida — no backing tracks needed.
-      </p>
-      <a href="/festivals" class="blog-card-read">See how it works <span class="arrow">→</span></a>
     </div>
-  </article>
+  </section>
 
-  <article class="blog-card">
-    <a href="/sax-o-grams" class="blog-card-image-link">
-      <div class="blog-card-image" style="background-image: url('/assets/photos/band-3.jpg');"></div>
-    </a>
-    <div class="blog-card-body">
-      <div class="blog-card-meta">
-        <span class="blog-card-tag">Surprise</span>
+  <!-- ============ FAQ ============ -->
+  <section class="section">
+    <div class="section-kicker">Good to Know</div>
+    <h2 class="section-title">Services <em>FAQ.</em></h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">How do we know which service fits our event?</div>
+        <p class="faq-answer">Start with what kind of event you're planning — a wedding, a corporate party, a festival slot, or a surprise visit — and reach out with the details. We'll help you figure out group size and set length from there.</p>
       </div>
-      <h2 class="blog-card-title">
-        <a href="/sax-o-grams">Sax-O-Grams</a>
-      </h2>
-      <p class="blog-card-excerpt">
-        A surprise saxophone visit for birthdays, office holidays, and anything else worth celebrating — a few players or the whole kit.
-      </p>
-      <a href="/sax-o-grams" class="blog-card-read">See how it works <span class="arrow">→</span></a>
+      <div class="faq-item">
+        <div class="faq-question">How far do you travel?</div>
+        <p class="faq-answer">We're based in Tampa and regularly play across central Florida, including St. Petersburg, Clearwater, Sarasota, Lakeland, Brandon, and Orlando. We'll travel further for the right date.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do we get pricing?</div>
+        <p class="faq-answer">Every quote is built around group size, set length, and location, so we don't post flat rates. Fill out our booking form with your event details and we'll follow up with real numbers within a day or two.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can you combine services, like a Sax-O-Gram at a corporate holiday party?</div>
+        <p class="faq-answer">Absolutely. Tell us what you're picturing and we'll help you build it — plenty of our bookings mix and match.</p>
+      </div>
     </div>
-  </article>
+  </section>
 
-</section>
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="page-cta">
+    <div class="page-cta-inner">
+      <div class="section-kicker">Ready?</div>
+      <h2 class="section-title">Let's talk about <em>your event.</em></h2>
+      <p class="page-cta-sub">
+        Tell us what you're planning and we'll tell you how we'd approach it — no pressure, no sales pitch.
+      </p>
+      <div class="page-cta-actions">
+        <a href="/book" class="btn btn-primary">Book the Collective <span class="arrow">→</span></a>
+        <a href="/shows" class="btn btn-ghost">See Upcoming Shows <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ============ FOOTER ============ -->
