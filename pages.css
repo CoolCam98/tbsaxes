@@ -21,16 +21,8 @@
   mix-blend-mode: multiply;
   pointer-events: none;
 }
-.page-hero-plate {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  z-index: 1;
-  width: 100%;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  opacity: 0.9;
-}
-.page-hero-plate svg { display: block; width: 100%; height: auto; }
+/* Riso plates reuse .hero-plate-teal / .hero-plate-navy from styles.css directly,
+   so the hero decoration is a literal match to the homepage, not an approximation. */
 .page-hero-inner {
   position: relative;
   z-index: 5;
@@ -174,15 +166,14 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
   position: relative;
   overflow: hidden;
 }
+/* Same subtle corner-gradient treatment as .lineup, instead of a bold blob */
 .page-cta::before {
   content: '';
   position: absolute;
-  top: -35%; left: 50%;
-  transform: translateX(-50%);
-  width: 560px; height: 560px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--teal), transparent 70%);
-  opacity: 0.28;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 40% 40% at 10% 0%, rgba(15, 67, 95, 0.4), transparent),
+    radial-gradient(ellipse 30% 50% at 90% 100%, rgba(137, 169, 186, 0.1), transparent);
   pointer-events: none;
 }
 .page-cta-inner { position: relative; max-width: 640px; margin: 0 auto; }
