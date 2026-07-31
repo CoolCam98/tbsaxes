@@ -1,0 +1,229 @@
+/* ========== SERVICE LANDING PAGES ========== */
+/* Layers on top of styles.css — reuses the same variables, fonts, and section
+   patterns as the homepage (.section, .about, .lineup, .marquee, .band-photo)
+   so these pages read as real sections, not a single article. */
+
+/* ---------- Page hero ---------- */
+.page-hero {
+  position: relative;
+  padding: 200px 40px 200px;
+  background: var(--cream);
+  overflow: hidden;
+  isolation: isolate;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2' seed='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.08  0 0 0 0 0.15  0 0 0 0 0.24  0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  opacity: 0.7;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+/* Riso plates reuse .hero-plate-teal / .hero-plate-navy from styles.css directly,
+   so the hero decoration is a literal match to the homepage, not an approximation. */
+.page-hero-inner {
+  position: relative;
+  z-index: 5;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-hero-inner .section-kicker { justify-content: center; }
+.page-hero-inner .section-title { max-width: none; }
+.page-hero-tagline {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.55;
+  color: var(--navy);
+  max-width: 620px;
+  margin: 0 auto;
+}
+.page-hero-tagline em { font-style: italic; color: var(--teal); }
+.page-hero-ctas {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* ---------- Tinted section (neutral version of .shows's background treatment) ---------- */
+.tinted-section {
+  background: var(--cream-warm);
+  padding: 130px 40px;
+  max-width: none;
+  margin: 0;
+  position: relative;
+}
+.tinted-section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ---------- Info grid — numbered breakdowns, feature cards, occasion cards ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 44px;
+  margin-top: 56px;
+}
+.info-card {
+  border-top: 1px solid var(--teal);
+  padding-top: 24px;
+}
+.info-card-num {
+  display: block;
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--teal);
+  margin-bottom: 14px;
+}
+.info-card h3 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.info-card p {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--navy);
+}
+/* Dark variant — used inside a .lineup wrapper */
+.lineup .info-card { border-top-color: var(--steel); }
+.lineup .info-card-num { color: var(--steel); }
+.lineup .info-card h3 { color: var(--cream); }
+.lineup .info-card p { color: var(--steel-soft); }
+
+/* Prose paragraphs on a dark .lineup section (instead of a card grid) */
+.lineup-copy { max-width: 720px; margin-top: 24px; }
+.lineup-copy p {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--steel-soft);
+  margin-bottom: 20px;
+}
+.lineup-copy p:last-child { margin-bottom: 0; }
+
+/* Clickable variant — an .info-card that is itself an <a> */
+a.info-card {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+a.info-card:hover { transform: translateX(4px); }
+a.info-card:hover h3 { color: var(--teal); }
+.lineup a.info-card:hover h3 { color: var(--steel); }
+.info-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.lineup .info-card-link { color: var(--steel); }
+a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
+.info-card-link .arrow { display: inline-block; transition: transform 0.2s ease; }
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  border-top: 1px solid rgba(20, 39, 61, 0.2);
+  margin-top: 56px;
+  max-width: 860px;
+}
+.faq-item {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(20, 39, 61, 0.2);
+}
+.faq-question {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.faq-answer {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--navy);
+}
+
+/* ---------- Closing CTA band (full-bleed, like .booking but single-column) ---------- */
+.page-cta {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 120px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Same subtle corner-gradient treatment as .lineup, instead of a bold blob */
+.page-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 40% 40% at 10% 0%, rgba(15, 67, 95, 0.4), transparent),
+    radial-gradient(ellipse 30% 50% at 90% 100%, rgba(137, 169, 186, 0.1), transparent);
+  pointer-events: none;
+}
+.page-cta-inner { position: relative; max-width: 640px; margin: 0 auto; }
+.page-cta-inner .section-kicker { color: var(--steel); justify-content: center; }
+.page-cta-inner .section-kicker::before { background: var(--steel); }
+.page-cta-inner .section-title { color: var(--cream); max-width: none; }
+.page-cta-inner .section-title em { color: var(--steel); }
+.page-cta-sub {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--steel-soft);
+  margin-bottom: 36px;
+}
+.page-cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* .btn-ghost assumes a light background — override for the dark CTA band */
+.page-cta .btn-ghost {
+  color: var(--cream);
+  background: rgba(250, 249, 243, 0.08);
+  border-color: var(--steel);
+  backdrop-filter: none;
+}
+.page-cta .btn-ghost:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--cream);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .page-hero { padding: 150px 20px 140px; }
+  .info-grid { gap: 36px; margin-top: 40px; }
+  .faq-list { margin-top: 40px; }
+  .page-cta { padding: 80px 24px; }
+}
