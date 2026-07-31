@@ -1186,10 +1186,10 @@ body::before {
 }
 
 /* ========== RESPONSIVE — 960px ========== */
-@media (max-width: 960px) {
-  /* Nav */
-  .nav { padding: 14px 20px; }
-  .nav.scrolled { padding: 10px 20px; }
+/* Switch to the mobile nav earlier than the general layout breakpoint below —
+   six nav items need more horizontal room than 960px leaves on the way down
+   to it, so this avoids the label text wrapping mid-nav. */
+@media (max-width: 1150px) {
   .nav-links { display: none; }
   .nav-links.open {
     display: flex;
@@ -1203,6 +1203,12 @@ body::before {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
   .nav-toggle { display: block; }
+}
+
+@media (max-width: 960px) {
+  /* Nav */
+  .nav { padding: 14px 20px; }
+  .nav.scrolled { padding: 10px 20px; }
 
   /* Hero */
   .hero {

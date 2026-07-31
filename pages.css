@@ -220,10 +220,61 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
   color: var(--cream);
 }
 
+/* ---------- Application section (like .booking, but no "BOOK" watermark) ---------- */
+.apply-section {
+  background: var(--navy);
+  color: var(--cream);
+  padding: 130px 40px;
+  max-width: none;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.apply-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 40% 30% at 10% 0%, rgba(15, 67, 95, 0.4), transparent),
+    radial-gradient(ellipse 30% 40% at 90% 100%, rgba(137, 169, 186, 0.1), transparent);
+  pointer-events: none;
+}
+.apply-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.apply-section .section-title { color: var(--cream); }
+.apply-section .section-title em { color: var(--steel); }
+.apply-section .section-kicker { color: var(--steel); }
+.apply-section .section-kicker::before { background: var(--steel); }
+.apply-intro {
+  font-family: var(--f-body);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--cream);
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+.apply-intro a {
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 1px solid var(--steel);
+  transition: border-color 0.2s ease;
+}
+.apply-intro a:hover { border-color: var(--cream); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .page-hero { padding: 150px 20px 140px; }
   .info-grid { gap: 36px; margin-top: 40px; }
   .faq-list { margin-top: 40px; }
   .page-cta { padding: 80px 24px; }
+  .apply-section { padding: 80px 20px; }
+  .apply-inner { grid-template-columns: 1fr; gap: 50px; }
 }
