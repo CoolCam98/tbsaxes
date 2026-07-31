@@ -468,6 +468,13 @@ body::before {
   margin: 8px 14px 0 0;
   color: var(--teal);
 }
+.about-copy a {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--steel);
+  transition: border-color 0.2s ease;
+}
+.about-copy a:hover { border-color: var(--teal); }
 
 /* ========== BAND PHOTOS — polaroid style ========== */
 .band-photo {
@@ -1309,10 +1316,41 @@ body::before {
   .marquee-track { animation-duration: 4s; }
 }
 
+/* ========== FLOATING DONATE BUTTON ========== */
+.donate-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy);
+  color: var(--cream);
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(20, 39, 61, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.donate-float:hover {
+  background: var(--teal);
+  transform: translateY(-2px);
+}
+.donate-float svg { width: 16px; height: 16px; flex-shrink: 0; }
+
 /* ========== RESPONSIVE — 560px ========== */
 @media (max-width: 560px) {
   /* Hero */
   .hero-title { font-size: clamp(36px, 12vw, 64px); }
+
+  /* Donate button */
+  .donate-float { right: 16px; bottom: 16px; padding: 11px 16px; font-size: 11px; gap: 8px; }
 
   /* Lineup — single column */
   .lineup-grid { grid-template-columns: 1fr; }

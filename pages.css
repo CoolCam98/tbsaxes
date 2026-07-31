@@ -168,6 +168,13 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
   line-height: 1.65;
   color: var(--navy);
 }
+.faq-answer a {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--steel);
+  transition: border-color 0.2s ease;
+}
+.faq-answer a:hover { border-color: var(--teal); }
 
 /* ---------- Closing CTA band (full-bleed, like .booking but single-column) ---------- */
 .page-cta {
@@ -220,54 +227,107 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
   color: var(--cream);
 }
 
-/* ---------- Application section (like .booking, but no "BOOK" watermark) ---------- */
+/* ---------- Application section — a distinct "paper application" card,
+   deliberately different from the booking page's dark two-column .form ---------- */
 .apply-section {
-  background: var(--navy);
-  color: var(--cream);
+  background: var(--cream-warm);
   padding: 130px 40px;
   max-width: none;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
-.apply-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(ellipse 40% 30% at 10% 0%, rgba(15, 67, 95, 0.4), transparent),
-    radial-gradient(ellipse 30% 40% at 90% 100%, rgba(137, 169, 186, 0.1), transparent);
-  pointer-events: none;
-}
-.apply-inner {
+.apply-section-inner {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
 }
-.apply-section .section-title { color: var(--cream); }
-.apply-section .section-title em { color: var(--steel); }
-.apply-section .section-kicker { color: var(--steel); }
-.apply-section .section-kicker::before { background: var(--steel); }
-.apply-intro {
+.apply-section-header {
+  max-width: 620px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.apply-section-header .section-kicker { justify-content: center; }
+.apply-section-header .section-title { max-width: none; }
+.apply-lede {
   font-family: var(--f-body);
-  font-size: 18px;
   font-weight: 300;
-  line-height: 1.55;
-  color: var(--cream);
-  margin-bottom: 32px;
-  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--navy);
+  margin-top: 20px;
 }
-.apply-intro a {
-  color: var(--cream);
+.apply-lede a {
+  color: var(--teal);
   text-decoration: none;
   border-bottom: 1px solid var(--steel);
   transition: border-color 0.2s ease;
 }
-.apply-intro a:hover { border-color: var(--cream); }
+.apply-lede a:hover { border-color: var(--teal); }
+
+.apply-card {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--cream);
+  border: 2px solid var(--navy);
+  padding: 56px;
+  box-shadow: 10px 10px 0 var(--teal);
+}
+.apply-card-stamp {
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  transform: rotate(4deg);
+  box-shadow: 0 6px 14px rgba(20, 39, 61, 0.25);
+}
+
+.apply-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.apply-field { margin-bottom: 28px; }
+.apply-label {
+  display: block;
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.apply-input,
+.apply-textarea {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(20, 39, 61, 0.25);
+  padding: 8px 2px;
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--navy);
+  transition: border-color 0.2s ease;
+}
+.apply-input::placeholder,
+.apply-textarea::placeholder { color: rgba(20, 39, 61, 0.35); }
+.apply-input:focus,
+.apply-textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+.apply-textarea { resize: vertical; min-height: 90px; }
+.apply-submit { width: 100%; justify-content: center; margin-top: 12px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
@@ -275,6 +335,9 @@ a.info-card:hover .info-card-link .arrow { transform: translateX(4px); }
   .info-grid { gap: 36px; margin-top: 40px; }
   .faq-list { margin-top: 40px; }
   .page-cta { padding: 80px 24px; }
+  .apply-section { padding: 80px 20px; }
+  .apply-card { padding: 36px 24px; box-shadow: 6px 6px 0 var(--teal); }
+  .apply-row { grid-template-columns: 1fr; gap: 0; }
   .apply-section { padding: 80px 20px; }
   .apply-inner { grid-template-columns: 1fr; gap: 50px; }
 }
