@@ -105,6 +105,18 @@
 .lineup .info-card h3 { color: var(--cream); }
 .lineup .info-card p { color: var(--steel-soft); }
 
+/* Prose paragraphs on a dark .lineup section (instead of a card grid) */
+.lineup-copy { max-width: 720px; margin-top: 24px; }
+.lineup-copy p {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--steel-soft);
+  margin-bottom: 20px;
+}
+.lineup-copy p:last-child { margin-bottom: 0; }
+
 /* Clickable variant — an .info-card that is itself an <a> */
 a.info-card {
   display: block;
