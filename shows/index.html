@@ -39,27 +39,43 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/pages.css">
 
-  <!-- Add one more MusicEvent script block like this per additional upcoming show. -->
+  <!-- Add one MusicEvent script block like this per upcoming show once real details are confirmed. -->
   <!-- Include "offers" (price/ticket URL) on any show once real ticket info exists. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MusicEvent",
-    "name": "Back to School Bash",
-    "startDate": "2026-08-01",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "Tampa Bay, FL"
+    "@type": ["MusicGroup", "LocalBusiness"],
+    "name": "Tampa Bay Saxophone Collective",
+    "url": "https://tbsaxes.com",
+    "logo": "https://tbsaxes.com/assets/logos/logo-social-media-light.png",
+    "image": "https://tbsaxes.com/assets/logos/logo-social-media-light.png",
+    "description": "A Tampa-based saxophone and horn band for weddings, festivals, corporate events, and private parties. Jazz, funk, soul, and whatever else the room calls for.",
+    "genre": ["Jazz", "Funk", "Soul", "Pop"],
+    "email": "tbsaxcollective@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tampa",
+      "addressRegion": "FL",
+      "addressCountry": "US"
     },
-    "performer": {
-      "@type": "MusicGroup",
-      "name": "Tampa Bay Saxophone Collective",
-      "url": "https://tbsaxes.com"
-    },
-    "url": "https://tbsaxes.com/shows"
+    "areaServed": [
+      {"@type": "Place", "name": "Tampa, FL"},
+      {"@type": "Place", "name": "St. Petersburg, FL"},
+      {"@type": "Place", "name": "Clearwater, FL"},
+      {"@type": "Place", "name": "Wesley Chapel, FL"},
+      {"@type": "Place", "name": "Sarasota, FL"},
+      {"@type": "Place", "name": "Lakeland, FL"},
+      {"@type": "Place", "name": "Brandon, FL"},
+      {"@type": "Place", "name": "Orlando, FL"},
+      {"@type": "Place", "name": "Central Florida"}
+    ],
+    "sameAs": [
+      "https://www.instagram.com/tbsaxcollective/",
+      "https://www.facebook.com/tbsaxcollective/"
+    ]
   }
   </script>
+
 </head>
 <body>
 
@@ -144,7 +160,7 @@
       </div>
 
       <figure class="band-photo band-photo--about">
-        <img src="/assets/photos/band-3.jpg" alt="Members of the Tampa Bay Saxophone Collective performing together" loading="lazy">
+        <img src="/assets/photos/band-3.jpg" alt="Members of the Tampa Bay Saxophone Collective performing live in the Tampa Bay area" loading="lazy">
       </figure>
     </div>
   </section>
@@ -154,7 +170,7 @@
     <div class="shows-inner">
 
       <figure class="band-photo band-photo--shows">
-        <img src="/assets/photos/band-1.jpg" alt="The Tampa Bay Saxophone Collective playing on stage" loading="lazy">
+        <img src="/assets/photos/band-1.jpg" alt="The Tampa Bay Saxophone Collective playing live on stage in Tampa, FL" loading="lazy">
       </figure>
 
       <div class="shows-header">
@@ -165,19 +181,7 @@
         <a href="/book" class="btn btn-ghost">Book a Private Show <span class="arrow">→</span></a>
       </div>
 
-      <ul class="show-list">
-        <li class="show-item">
-          <div class="show-date">
-            <div class="show-date-day">1</div>
-            <div class="show-date-month">August · Sat</div>
-          </div>
-          <div>
-            <div class="show-venue">Back to School Bash</div>
-            <div class="show-venue-sub">Details coming soon</div>
-          </div>
-          <div class="show-city">Tampa Bay, FL</div>
-        </li>
-      </ul>
+      <p class="show-empty">No public shows on the books right now — we're between bookings. Follow us on <a href="https://www.instagram.com/tbsaxcollective/" target="_blank" rel="noopener me">Instagram</a> or <a href="https://www.facebook.com/tbsaxcollective/" target="_blank" rel="noopener me">Facebook</a> and we'll post the next one as soon as it's locked in.</p>
 
     </div>
   </section>
@@ -242,6 +246,13 @@
         <h5>Contact</h5>
         <ul>
           <li><a href="mailto:tbsaxcollective@gmail.com">tbsaxcollective@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Based In</h5>
+        <ul>
+          <li>Tampa Bay, FL</li>
+          <li><a href="/st-petersburg">St. Petersburg, FL</a></li>
         </ul>
       </div>
     </div>

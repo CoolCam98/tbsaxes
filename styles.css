@@ -764,6 +764,15 @@ body::before {
   font-size: 17px;
   color: var(--navy);
 }
+.show-empty {
+  border-top: 1px solid var(--navy);
+  padding: 40px 8px;
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--navy);
+}
+.show-empty a { color: var(--teal); }
 .show-tag {
   font-family: var(--f-display);
   font-weight: 500;
