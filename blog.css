@@ -231,6 +231,7 @@
 
 .blog-post-hero-img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   filter: grayscale(20%) contrast(1.05) sepia(0.08);
@@ -285,6 +286,7 @@
 }
 .blog-post-body img {
   width: 100%;
+  height: auto;
   margin: 32px 0;
   filter: grayscale(20%) contrast(1.05) sepia(0.08);
 }
