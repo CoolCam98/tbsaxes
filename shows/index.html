@@ -39,8 +39,66 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/pages.css">
 
-  <!-- Add one MusicEvent script block like this per upcoming show once real details are confirmed. -->
-  <!-- Include "offers" (price/ticket URL) on any show once real ticket info exists. -->
+  <!-- One MusicEvent per public show. Remove each block after the show has passed. -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicEvent",
+      "name": "Kyle's Christmas on the Farm",
+      "startDate": "2026-12-05T17:00:00-05:00",
+      "doorTime": "2026-12-05T17:00:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Starkey Barn at Starkey Market",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3460 Starkey Blvd",
+          "addressLocality": "Trinity",
+          "addressRegion": "FL",
+          "postalCode": "34655",
+          "addressCountry": "US"
+        }
+      },
+      "performer": [
+        {"@type": "Person", "name": "Kyle Schroeder"},
+        {"@type": "MusicGroup", "name": "Tampa Bay Saxophone Collective", "url": "https://tbsaxes.com"}
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.eventbrite.com/e/2001387109721",
+        "availability": "https://schema.org/InStock"
+      },
+      "image": "https://tbsaxes.com/assets/photos/band-1.jpg",
+      "description": "A family-friendly holiday concert at Starkey Barn in Trinity, FL, featuring the Tampa Bay Saxophone Collective."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicEvent",
+      "name": "Tampa Bay Saxophone Collective at Brandon Exchange",
+      "startDate": "2026-12-12T18:30:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Brandon Exchange",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "459 Brandon Town Center Dr",
+          "addressLocality": "Brandon",
+          "addressRegion": "FL",
+          "postalCode": "33511",
+          "addressCountry": "US"
+        }
+      },
+      "performer": {"@type": "MusicGroup", "name": "Tampa Bay Saxophone Collective", "url": "https://tbsaxes.com"},
+      "image": "https://tbsaxes.com/assets/photos/band-1.jpg",
+      "description": "Live holiday saxophone music from the Tampa Bay Saxophone Collective at Brandon Exchange."
+    }
+  ]
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -155,8 +213,83 @@
         <a href="/book" class="btn btn-ghost">Book a Private Show <span class="arrow">→</span></a>
       </div>
 
-      <p class="show-empty">No public shows on the books right now — we're between bookings. Follow us on <a href="https://www.instagram.com/tbsaxcollective/" target="_blank" rel="noopener me">Instagram</a> or <a href="https://www.facebook.com/tbsaxcollective/" target="_blank" rel="noopener me">Facebook</a> and we'll post the next one as soon as it's locked in.</p>
+      <!-- Each show hides itself automatically the day after its data-date. -->
+      <ul class="show-list" data-show-list>
+        <li class="show-item" data-date="2026-12-05">
+          <div class="show-date">
+            <div class="show-date-day">05</div>
+            <div class="show-date-month">Dec</div>
+          </div>
+          <div>
+            <div class="show-venue">Kyle's Christmas on the Farm</div>
+            <div class="show-venue-sub">Starkey Barn at Starkey Market · Doors 5:00 PM</div>
+          </div>
+          <div class="show-city">Trinity, FL</div>
+          <a href="https://www.eventbrite.com/e/2001387109721" class="show-tag" target="_blank" rel="noopener">Tickets ↗</a>
+        </li>
+        <li class="show-item" data-date="2026-12-08">
+          <div class="show-date">
+            <div class="show-date-day">08</div>
+            <div class="show-date-month">Dec</div>
+          </div>
+          <div>
+            <div class="show-venue">Holiday Tree Lighting</div>
+            <div class="show-venue-sub">Private event</div>
+          </div>
+          <div class="show-city"></div>
+          <span class="show-tag">Private</span>
+        </li>
+        <li class="show-item" data-date="2026-12-12">
+          <div class="show-date">
+            <div class="show-date-day">12</div>
+            <div class="show-date-month">Dec</div>
+          </div>
+          <div>
+            <div class="show-venue">Brandon Exchange</div>
+            <div class="show-venue-sub">Holiday performance · 6:30 PM</div>
+          </div>
+          <div class="show-city">Brandon, FL</div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Brandon+Exchange+459+Brandon+Town+Center+Dr+Brandon+FL" class="show-tag" target="_blank" rel="noopener">Directions ↗</a>
+        </li>
+        <!-- Christmas Sweater Celebration, 1210 Ray Charles Blvd, Tampa: add here once the date is confirmed. -->
+      </ul>
 
+      <p class="show-empty" data-show-empty hidden>No public shows on the books right now. Follow us on <a href="https://www.instagram.com/tbsaxcollective/" target="_blank" rel="noopener me">Instagram</a> or <a href="https://www.facebook.com/tbsaxcollective/" target="_blank" rel="noopener me">Facebook</a> for the next announcement, or <a href="/book">book a private show</a>.</p>
+
+    </div>
+  </section>
+
+  <!-- ============ RECENT SHOWS ============ -->
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Recently <em>played.</em></h2>
+
+      <ul class="show-list">
+        <li class="show-item">
+          <div class="show-date">
+            <div class="show-date-day">19</div>
+            <div class="show-date-month">Nov</div>
+          </div>
+          <div>
+            <div class="show-venue">Great American Teach-In</div>
+            <div class="show-venue-sub">Two Hillsborough County public schools</div>
+          </div>
+          <div class="show-city">Hillsborough County, FL</div>
+          <a href="/blog/great-american-teach-in" class="show-tag">Read the recap</a>
+        </li>
+        <li class="show-item">
+          <div class="show-date">
+            <div class="show-date-day">Apr</div>
+            <div class="show-date-month">2026</div>
+          </div>
+          <div>
+            <div class="show-venue">Armature Works</div>
+            <div class="show-venue-sub">Live set, recorded for our sampler</div>
+          </div>
+          <div class="show-city">Tampa, FL</div>
+          <a href="/#listen" class="show-tag">Listen</a>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -243,6 +376,21 @@
       navToggle.textContent = navLinks.classList.contains('open') ? 'Close' : 'Menu';
     });
   }
+
+  // Hide shows whose date has passed; fall back to the empty message if none remain.
+  (function () {
+    const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD, local time
+    document.querySelectorAll('[data-show-list]').forEach(function (list) {
+      list.querySelectorAll('[data-date]').forEach(function (item) {
+        if (item.dataset.date < today) item.remove();
+      });
+      if (!list.querySelector('.show-item')) {
+        list.hidden = true;
+        const empty = list.parentElement.querySelector('[data-show-empty]');
+        if (empty) empty.hidden = false;
+      }
+    });
+  })();
 </script>
 </body>
 </html>

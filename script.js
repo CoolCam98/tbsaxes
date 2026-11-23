@@ -269,3 +269,19 @@ audio.addEventListener('error', () => {
   resetWaveform();
   setPlayIcon(false);
 });
+// ========== SHOWS: hide past dates ==========
+// Removes any show whose data-date (YYYY-MM-DD) is before today, and reveals
+// the "no shows" message if the list ends up empty.
+(function () {
+  const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD, local time
+  document.querySelectorAll('[data-show-list]').forEach((list) => {
+    list.querySelectorAll('[data-date]').forEach((item) => {
+      if (item.dataset.date < today) item.remove();
+    });
+    if (!list.querySelector('.show-item')) {
+      list.hidden = true;
+      const empty = list.parentElement.querySelector('[data-show-empty]');
+      if (empty) empty.hidden = false;
+    }
+  });
+})();

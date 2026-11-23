@@ -327,7 +327,35 @@
           <a href="/shows" class="btn btn-ghost">See All Shows <span class="arrow">→</span></a>
         </div>
 
-        <p class="show-empty">No public shows on the books right now — we're between bookings. Follow us on <a href="https://www.instagram.com/tbsaxcollective/" target="_blank" rel="noopener me">Instagram</a> or <a href="https://www.facebook.com/tbsaxcollective/" target="_blank" rel="noopener me">Facebook</a> and we'll post the next one as soon as it's locked in.</p>
+        <!-- Keep in sync with /shows. Each show hides itself automatically the day after its data-date. -->
+        <ul class="show-list" data-show-list>
+          <li class="show-item" data-date="2026-12-05">
+            <div class="show-date">
+              <div class="show-date-day">05</div>
+              <div class="show-date-month">Dec</div>
+            </div>
+            <div>
+              <div class="show-venue">Kyle's Christmas on the Farm</div>
+              <div class="show-venue-sub">Starkey Barn at Starkey Market · Doors 5:00 PM</div>
+            </div>
+            <div class="show-city">Trinity, FL</div>
+            <a href="https://www.eventbrite.com/e/2001387109721" class="show-tag" target="_blank" rel="noopener">Tickets ↗</a>
+          </li>
+          <li class="show-item" data-date="2026-12-12">
+            <div class="show-date">
+              <div class="show-date-day">12</div>
+              <div class="show-date-month">Dec</div>
+            </div>
+            <div>
+              <div class="show-venue">Brandon Exchange</div>
+              <div class="show-venue-sub">Holiday performance · 6:30 PM</div>
+            </div>
+            <div class="show-city">Brandon, FL</div>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Brandon+Exchange+459+Brandon+Town+Center+Dr+Brandon+FL" class="show-tag" target="_blank" rel="noopener">Directions ↗</a>
+          </li>
+        </ul>
+
+        <p class="show-empty" data-show-empty hidden>No public shows on the books right now. Follow us on <a href="https://www.instagram.com/tbsaxcollective/" target="_blank" rel="noopener me">Instagram</a> or <a href="https://www.facebook.com/tbsaxcollective/" target="_blank" rel="noopener me">Facebook</a> for the next announcement.</p>
 
       </div>
     </section>
